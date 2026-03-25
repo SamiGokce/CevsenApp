@@ -1,0 +1,404 @@
+{
+  "babs": [
+    {
+      "id": 51,
+      "lines": [
+        { "arabic": "يَا مَنْ هُوَ أَوَّلُ كُلِّ شَيْءٍ وَآخِرُهُ", "transliteration": "Yā Man huwa Awwalu kulli shay'in wa ākhiruh", "translation": { "en": "O He Who is the First of everything and its Last", "tr": "Ey her şeyin evveli ve âhiri olan" } },
+        { "arabic": "يَا مَنْ هُوَ ظَاهِرُ كُلِّ شَيْءٍ وَبَاطِنُهُ", "transliteration": "Yā Man huwa Ẓāhiru kulli shay'in wa bāṭinuh", "translation": { "en": "O He Who is the Manifest of everything and its Hidden", "tr": "Ey her şeyin zâhiri ve bâtını olan" } },
+        { "arabic": "يَا مَنْ هُوَ خَالِقُ كُلِّ شَيْءٍ وَمُمِيتُهُ", "transliteration": "Yā Man huwa Khāliqu kulli shay'in wa mumītuh", "translation": { "en": "O He Who is the Creator of everything and its Destroyer", "tr": "Ey her şeyin yaratıcısı ve yok edicisi olan" } },
+        { "arabic": "يَا مَنْ هُوَ عَالِمُ كُلِّ شَيْءٍ وَمُخْبِرُهُ", "transliteration": "Yā Man huwa 'Ālimu kulli shay'in wa mukhbiruh", "translation": { "en": "O He Who is the Knower of everything and its Informer", "tr": "Ey her şeyin bileni ve haber vereni olan" } },
+        { "arabic": "يَا مَنْ هُوَ رَازِقُ كُلِّ شَيْءٍ وَمُيَسِّرُهُ", "transliteration": "Yā Man huwa Rāziqu kulli shay'in wa muyassiruh", "translation": { "en": "O He Who is the Provider of everything and its Facilitator", "tr": "Ey her şeyin rızık vereni ve kolaylaştıranı olan" } },
+        { "arabic": "يَا مَنْ هُوَ مَالِكُ كُلِّ شَيْءٍ وَحَاكِمُهُ", "transliteration": "Yā Man huwa Māliku kulli shay'in wa ḥākimuh", "translation": { "en": "O He Who is the Owner of everything and its Ruler", "tr": "Ey her şeyin sahibi ve hâkimi olan" } },
+        { "arabic": "يَا مَنْ هُوَ مُبْدِئُ كُلِّ شَيْءٍ وَمُعِيدُهُ", "transliteration": "Yā Man huwa Mubdi'u kulli shay'in wa mu'īduh", "translation": { "en": "O He Who is the Originator of everything and its Restorer", "tr": "Ey her şeyin başlatanı ve iade edeni olan" } },
+        { "arabic": "يَا مَنْ هُوَ مُنْشِئُ كُلِّ شَيْءٍ وَمُقَدِّرُهُ", "transliteration": "Yā Man huwa Munshi'u kulli shay'in wa muqaddiruh", "translation": { "en": "O He Who is the Causer of everything and its Former", "tr": "Ey her şeyin inşa edeni ve takdir edeni olan" } },
+        { "arabic": "يَا مَنْ هُوَ مُحْيِي كُلِّ شَيْءٍ وَمُمِيتُهُ", "transliteration": "Yā Man huwa Muḥyī kulli shay'in wa mumītuh", "translation": { "en": "O He Who is the Giver of life to everything and its Taker", "tr": "Ey her şeye hayat veren ve onu alan olan" } },
+        { "arabic": "يَا مَنْ هُوَ خَالِقُ كُلِّ شَيْءٍ وَوَارِثُهُ", "transliteration": "Yā Man huwa Khāliqu kulli shay'in wa wārithuh", "translation": { "en": "O He Who is the Creator of everything and its Inheritor", "tr": "Ey her şeyin yaratıcısı ve vârisi olan" } }
+      ],
+      "closing": { "arabic": "سُبْحَانَكَ يَا لَا إِلٰهَ إِلَّا أَنْتَ الْأَمَانَ الْأَمَانَ خَلِّصْنَا مِنَ النَّارِ", "transliteration": "Subḥānaka yā lā ilāha illā anta al-amān al-amān khalliṣnā mina'n-nār", "translation": { "en": "Glory be to You, there is no god but You. Safety, safety! Deliver us from the Fire.", "tr": "Sen her türlü eksiklikten münezzehsin. Senden başka ilah yoktur. Emân ver bize, emân ver. Bizi cehennemden kurtar." } }
+    },
+    {
+      "id": 52,
+      "lines": [
+        { "arabic": "يَا مَنْ يَذْكُرُ وَلَا يَنْسَى", "transliteration": "Yā Man yadhkuru wa lā yansā", "translation": { "en": "O He Who remembers and is not forgetful", "tr": "Ey zikreden ve unutmayan" } },
+        { "arabic": "يَا مَنْ يَخْلُقُ وَلَا يُخْلَقُ", "transliteration": "Yā Man yakhluqu wa lā yukhlaq", "translation": { "en": "O He Who creates and is not created", "tr": "Ey yaratan ve yaratılmayan" } },
+        { "arabic": "يَا مَنْ يَهْدِي وَلَا يُهْدَى", "transliteration": "Yā Man yahdī wa lā yuhdā", "translation": { "en": "O He Who guides and is not guided", "tr": "Ey hidayet eden ve hidayete muhtaç olmayan" } },
+        { "arabic": "يَا مَنْ يُحْيِي وَلَا يَمُوتُ", "transliteration": "Yā Man yuḥyī wa lā yamūt", "translation": { "en": "O He Who gives life and does not die", "tr": "Ey hayat veren ve ölmeyen" } },
+        { "arabic": "يَا مَنْ يَرْزُقُ وَلَا يُرْزَقُ", "transliteration": "Yā Man yarzuqu wa lā yurzaq", "translation": { "en": "O He Who provides and is not provided for", "tr": "Ey rızık veren ve rızıklandırılmayan" } },
+        { "arabic": "يَا مَنْ يُطْعِمُ وَلَا يُطْعَمُ", "transliteration": "Yā Man yuṭ'imu wa lā yuṭ'am", "translation": { "en": "O He Who feeds and is not fed", "tr": "Ey yediren ve yedirilmeyen" } },
+        { "arabic": "يَا مَنْ يُجِيرُ وَلَا يُجَارُ عَلَيْهِ", "transliteration": "Yā Man yujīru wa lā yujāru 'alayh", "translation": { "en": "O He Who protects and is not protected", "tr": "Ey koruyan ve korunmaya muhtaç olmayan" } },
+        { "arabic": "يَا مَنْ يَقْضِي وَلَا يُقْضَى عَلَيْهِ", "transliteration": "Yā Man yaqḍī wa lā yuqḍā 'alayh", "translation": { "en": "O He Who decrees and is not decreed upon", "tr": "Ey hükmeden ve hükmedilmeyen" } },
+        { "arabic": "يَا مَنْ يَحْكُمُ وَلَا يُحْكَمُ عَلَيْهِ", "transliteration": "Yā Man yaḥkumu wa lā yuḥkamu 'alayh", "translation": { "en": "O He Who judges and is not judged", "tr": "Ey yargılayan ve yargılanmayan" } },
+        { "arabic": "يَا مَنْ يَبْقَى وَلَا يَفْنَى", "transliteration": "Yā Man yabqā wa lā yafnā", "translation": { "en": "O He Who is Eternal and does not perish", "tr": "Ey bâkî olan ve fânî olmayan" } }
+      ],
+      "closing": { "arabic": "سُبْحَانَكَ يَا لَا إِلٰهَ إِلَّا أَنْتَ الْأَمَانَ الْأَمَانَ خَلِّصْنَا مِنَ النَّارِ", "transliteration": "Subḥānaka yā lā ilāha illā anta al-amān al-amān khalliṣnā mina'n-nār", "translation": { "en": "Glory be to You, there is no god but You. Safety, safety! Deliver us from the Fire.", "tr": "Sen her türlü eksiklikten münezzehsin. Senden başka ilah yoktur. Emân ver bize, emân ver. Bizi cehennemden kurtar." } }
+    },
+    {
+      "id": 53,
+      "lines": [
+        { "arabic": "يَا خَيْرَ مُعِينٍ", "transliteration": "Yā Khayra mu'īn", "translation": { "en": "O Best Helper", "tr": "Ey en hayırlı yardımcı" } },
+        { "arabic": "يَا خَيْرَ حَاكِمٍ", "transliteration": "Yā Khayra ḥākim", "translation": { "en": "O Best Judge", "tr": "Ey en hayırlı hâkim" } },
+        { "arabic": "يَا خَيْرَ صَاحِبٍ", "transliteration": "Yā Khayra ṣāḥib", "translation": { "en": "O Best Companion", "tr": "Ey en hayırlı dost" } },
+        { "arabic": "يَا خَيْرَ حَبِيبٍ", "transliteration": "Yā Khayra ḥabīb", "translation": { "en": "O Best Beloved", "tr": "Ey en hayırlı sevgili" } },
+        { "arabic": "يَا خَيْرَ سَيِّدٍ", "transliteration": "Yā Khayra sayyid", "translation": { "en": "O Best Master", "tr": "Ey en hayırlı efendi" } },
+        { "arabic": "يَا خَيْرَ دَلِيلٍ", "transliteration": "Yā Khayra dalīl", "translation": { "en": "O Best Guide", "tr": "Ey en hayırlı kılavuz" } },
+        { "arabic": "يَا خَيْرَ شَافٍ", "transliteration": "Yā Khayra shāfī", "translation": { "en": "O Best Healer", "tr": "Ey en hayırlı şifa veren" } },
+        { "arabic": "يَا خَيْرَ مُجِيبٍ", "transliteration": "Yā Khayra mujīb", "translation": { "en": "O Best Responder", "tr": "Ey en hayırlı icabet eden" } },
+        { "arabic": "يَا خَيْرَ حَفِيظٍ", "transliteration": "Yā Khayra ḥafīẓ", "translation": { "en": "O Best Guardian", "tr": "Ey en hayırlı koruyucu" } },
+        { "arabic": "يَا خَيْرَ مُغْنٍ", "transliteration": "Yā Khayra mughnī", "translation": { "en": "O Best Enricher", "tr": "Ey en hayırlı zenginleştiren" } }
+      ],
+      "closing": { "arabic": "سُبْحَانَكَ يَا لَا إِلٰهَ إِلَّا أَنْتَ الْأَمَانَ الْأَمَانَ خَلِّصْنَا مِنَ النَّارِ", "transliteration": "Subḥānaka yā lā ilāha illā anta al-amān al-amān khalliṣnā mina'n-nār", "translation": { "en": "Glory be to You, there is no god but You. Safety, safety! Deliver us from the Fire.", "tr": "Sen her türlü eksiklikten münezzehsin. Senden başka ilah yoktur. Emân ver bize, emân ver. Bizi cehennemden kurtar." } }
+    },
+    {
+      "id": 54,
+      "lines": [
+        { "arabic": "يَا مَنْ هُوَ فِي قُدْرَتِهِ عَزِيزٌ", "transliteration": "Yā Man huwa fī qudratihī 'azīz", "translation": { "en": "O He Who is in power and is Mighty", "tr": "Ey kudretinde aziz olan" } },
+        { "arabic": "يَا مَنْ هُوَ فِي حِكْمَتِهِ عَلِيمٌ", "transliteration": "Yā Man huwa fī ḥikmatihī 'alīm", "translation": { "en": "O He Who is concealed and is All-Knowing", "tr": "Ey hikmetinde alîm olan" } },
+        { "arabic": "يَا مَنْ هُوَ فِي عِبَادَتِهِ شَكُورٌ", "transliteration": "Yā Man huwa fī 'ibādatihī shakūr", "translation": { "en": "O He Who is worshipped and is Thankful", "tr": "Ey ibadetinde şekûr olan" } },
+        { "arabic": "يَا مَنْ هُوَ عِنْدَ مَعْصِيَتِهِ غَفُورٌ", "transliteration": "Yā Man huwa 'inda ma'ṣiyatihī ghafūr", "translation": { "en": "O He Who is disobeyed and is Forgiving", "tr": "Ey isyan edildiğinde gafûr olan" } },
+        { "arabic": "يَا مَنْ لَا تَحْتَوِيهِ الْأَفْكَارُ", "transliteration": "Yā Man lā taḥtawīhi'l-afkār", "translation": { "en": "O He Who is not contained in thought", "tr": "Ey fikirlerin ihata edemediği" } },
+        { "arabic": "يَا مَنْ لَا تُدْرِكُهُ الْأَبْصَارُ", "transliteration": "Yā Man lā tudrikuhu'l-abṣār", "translation": { "en": "O He Who is not perceived by sight", "tr": "Ey gözlerin idrak edemediği" } },
+        { "arabic": "يَا مَنْ لَا يَخْفَى عَلَيْهِ شَيْءٌ", "transliteration": "Yā Man lā yakhfā 'alayhi shay'", "translation": { "en": "O He Who is not hidden from anything", "tr": "Ey hiçbir şey Kendisine gizli kalmayan" } },
+        { "arabic": "يَا مَنْ لَا يَشُوبُهُ الشَّكُّ", "transliteration": "Yā Man lā yashūbuhu'sh-shakk", "translation": { "en": "O He Who is not mixed with doubt", "tr": "Ey şüphenin karışmadığı" } },
+        { "arabic": "يَا مَنْ هُوَ خَالِقُ الْإِنْسَانِ", "transliteration": "Yā Man huwa Khāliqu'l-insān", "translation": { "en": "O He Who is the Creator of the human being", "tr": "Ey insanın yaratıcısı olan" } },
+        { "arabic": "يَا مَنْ لَا شَرِيكَ لَهُ فِي مُلْكِهِ", "transliteration": "Yā Man lā sharīka lahū fī mulkih", "translation": { "en": "O He Who has no partner in His sovereignty", "tr": "Ey mülkünde ortağı olmayan" } }
+      ],
+      "closing": { "arabic": "سُبْحَانَكَ يَا لَا إِلٰهَ إِلَّا أَنْتَ الْأَمَانَ الْأَمَانَ خَلِّصْنَا مِنَ النَّارِ", "transliteration": "Subḥānaka yā lā ilāha illā anta al-amān al-amān khalliṣnā mina'n-nār", "translation": { "en": "Glory be to You, there is no god but You. Safety, safety! Deliver us from the Fire.", "tr": "Sen her türlü eksiklikten münezzehsin. Senden başka ilah yoktur. Emân ver bize, emân ver. Bizi cehennemden kurtar." } }
+    },
+    {
+      "id": 55,
+      "lines": [
+        { "arabic": "اَللّٰهُمَّ إِنِّي أَسْأَلُكَ بِاسْمِكَ يَا رَحْمٰنُ يَا رَحِيمُ", "transliteration": "Allāhumma innī as'aluka bi'smika yā Raḥmānu yā Raḥīm", "translation": { "en": "O Allah, I ask You by Your Name, O Compassionate, O Merciful", "tr": "Allah'ım, isminin hakkı için Senden istiyorum, ey Rahmân, ey Rahîm" } },
+        { "arabic": "يَا قَدِيمُ يَا قَيُّومُ", "transliteration": "Yā Qadīmu yā Qayyūm", "translation": { "en": "O Eternal, O Self-Subsisting", "tr": "Ey Kadîm, ey Kayyûm" } },
+        { "arabic": "يَا جَلِيلُ يَا كَرِيمُ", "transliteration": "Yā Jalīlu yā Karīm", "translation": { "en": "O Majestic, O Generous", "tr": "Ey Celîl, ey Kerîm" } },
+        { "arabic": "يَا جَمِيلُ يَا مَلِيكُ", "transliteration": "Yā Jamīlu yā Malīk", "translation": { "en": "O Beautiful, O Sovereign", "tr": "Ey Cemîl, ey Melîk" } },
+        { "arabic": "يَا مُقِيتُ يَا مُجِيبُ", "transliteration": "Yā Muqītu yā Mujīb", "translation": { "en": "O Nourisher, O Responder", "tr": "Ey Mukît, ey Mücîb" } },
+        { "arabic": "يَا فَتَّاحُ يَا عَلِيمُ", "transliteration": "Yā Fattāḥu yā 'Alīm", "translation": { "en": "O Opener, O Knower", "tr": "Ey Fettâh, ey Alîm" } },
+        { "arabic": "يَا قَابِضُ يَا بَاسِطُ", "transliteration": "Yā Qābiḍu yā Bāsiṭ", "translation": { "en": "O Reducer, O Expander", "tr": "Ey Kâbız, ey Bâsıt" } },
+        { "arabic": "يَا خَافِضُ يَا رَافِعُ", "transliteration": "Yā Khāfiḍu yā Rāfi'", "translation": { "en": "O Abaser, O Exalter", "tr": "Ey Hâfız, ey Râfi" } },
+        { "arabic": "يَا مُعِزُّ يَا مُذِلُّ", "transliteration": "Yā Mu'izzu yā Mudhill", "translation": { "en": "O Honorer, O Humiliator", "tr": "Ey Muizz, ey Müzill" } },
+        { "arabic": "يَا سَمِيعُ يَا بَصِيرُ", "transliteration": "Yā Samī'u yā Baṣīr", "translation": { "en": "O All-Hearing, O All-Seeing", "tr": "Ey Semî, ey Basîr" } }
+      ],
+      "closing": { "arabic": "سُبْحَانَكَ يَا لَا إِلٰهَ إِلَّا أَنْتَ الْأَمَانَ الْأَمَانَ خَلِّصْنَا مِنَ النَّارِ", "transliteration": "Subḥānaka yā lā ilāha illā anta al-amān al-amān khalliṣnā mina'n-nār", "translation": { "en": "Glory be to You, there is no god but You. Safety, safety! Deliver us from the Fire.", "tr": "Sen her türlü eksiklikten münezzehsin. Senden başka ilah yoktur. Emân ver bize, emân ver. Bizi cehennemden kurtar." } }
+    },
+    {
+      "id": 56,
+      "lines": [
+        { "arabic": "يَا مَنْ وَسِعَتْ رَحْمَتُهُ كُلَّ شَيْءٍ", "transliteration": "Yā Man wasi'at raḥmatuhū kulla shay'", "translation": { "en": "O He Whose mercy encompasses everything", "tr": "Ey rahmeti her şeyi kuşatan" } },
+        { "arabic": "يَا مَنْ سَبَقَتْ رَحْمَتُهُ غَضَبَهُ", "transliteration": "Yā Man sabaqat raḥmatuhū ghaḍabah", "translation": { "en": "O He Whose mercy precedes His wrath", "tr": "Ey rahmeti gazabını geçen" } },
+        { "arabic": "يَا مَنْ أَحَاطَتْ رَحْمَتُهُ بِالْخَلَائِقِ", "transliteration": "Yā Man aḥāṭat raḥmatuhū bi'l-khalā'iq", "translation": { "en": "O He Whose mercy encompasses all creation", "tr": "Ey rahmeti tüm yaratılmışları kuşatan" } },
+        { "arabic": "يَا مَنْ رَحْمَتُهُ كَنْزٌ لِلْمُخْلِصِينَ", "transliteration": "Yā Man raḥmatuhū kanzun li'l-mukhliṣīn", "translation": { "en": "O He Whose mercy is a treasure for the sincere", "tr": "Ey rahmeti ihlâs sahipleri için hazine olan" } },
+        { "arabic": "يَا مَنْ أَرْسَلَ رُسُلَهُ بِالرَّحْمَةِ", "transliteration": "Yā Man arsala rusulahū bi'r-raḥma", "translation": { "en": "O He Who sent His messengers with mercy", "tr": "Ey elçilerini rahmetle gönderen" } },
+        { "arabic": "يَا مَنْ أَنْزَلَ كُتُبَهُ بِالرَّحْمَةِ", "transliteration": "Yā Man anzala kutubahū bi'r-raḥma", "translation": { "en": "O He Who revealed His books with mercy", "tr": "Ey kitaplarını rahmetle indiren" } },
+        { "arabic": "يَا مَنْ يَرْجُو رَحْمَتَهُ كُلُّ الْخَلَائِقِ", "transliteration": "Yā Man yarjū raḥmatahū kullu'l-khalā'iq", "translation": { "en": "O He Whose mercy is sought by all creation", "tr": "Ey rahmetini tüm yaratılmışların umduğu" } },
+        { "arabic": "يَا مَنْ يَطْمَعُ فِي رَحْمَتِهِ الْمُذْنِبُونَ", "transliteration": "Yā Man yaṭma'u fī raḥmatihī'l-mudhnibūn", "translation": { "en": "O He Whose mercy is hoped for by sinners", "tr": "Ey günahkârların rahmetini umduğu" } },
+        { "arabic": "يَا مَنْ لَا تَنْقَطِعُ رَحْمَتُهُ أَبَدًا", "transliteration": "Yā Man lā tanqaṭi'u raḥmatuhū abadā", "translation": { "en": "O He Whose mercy has no end", "tr": "Ey rahmeti asla kesilmeyen" } },
+        { "arabic": "يَا مَنْ جَعَلَ الرَّحْمَةَ فِي قُلُوبِ عِبَادِهِ", "transliteration": "Yā Man ja'ala'r-raḥmata fī qulūbi 'ibādih", "translation": { "en": "O He Who placed mercy in the hearts of His servants", "tr": "Ey kullarının kalbine merhamet yerleştiren" } }
+      ],
+      "closing": { "arabic": "سُبْحَانَكَ يَا لَا إِلٰهَ إِلَّا أَنْتَ الْأَمَانَ الْأَمَانَ خَلِّصْنَا مِنَ النَّارِ", "transliteration": "Subḥānaka yā lā ilāha illā anta al-amān al-amān khalliṣnā mina'n-nār", "translation": { "en": "Glory be to You, there is no god but You. Safety, safety! Deliver us from the Fire.", "tr": "Sen her türlü eksiklikten münezzehsin. Senden başka ilah yoktur. Emân ver bize, emân ver. Bizi cehennemden kurtar." } }
+    },
+    {
+      "id": 57,
+      "lines": [
+        { "arabic": "يَا مَنْ يَلْجَأُ إِلَيْهِ الْخَائِفُونَ", "transliteration": "Yā Man yalja'u ilayhi'l-khā'ifūn", "translation": { "en": "O He in Whom the fearful find refuge", "tr": "Ey korkanların sığındığı" } },
+        { "arabic": "يَا مَنْ يَرْجُوهُ الرَّاجُونَ", "transliteration": "Yā Man yarjūhu'r-rājūn", "translation": { "en": "O He in Whom the hopeful find hope", "tr": "Ey umut edenlerin umduğu" } },
+        { "arabic": "يَا مَنْ يَهْتَدِي بِهِ الطَّالِبُونَ", "transliteration": "Yā Man yahtadī bihi'ṭ-ṭālibūn", "translation": { "en": "O He in Whom the seekers find guidance", "tr": "Ey arayanların hidayet bulduğu" } },
+        { "arabic": "يَا مَنْ يَسْتَعِينُ بِهِ الْمُجَاهِدُونَ", "transliteration": "Yā Man yasta'īnu bihi'l-mujāhidūn", "translation": { "en": "O He in Whom the striving ones find assistance", "tr": "Ey mücahitlerin yardım istediği" } },
+        { "arabic": "يَا مَنْ يَسْتَنْصِرُهُ الْمَظْلُومُونَ", "transliteration": "Yā Man yastanṣiruhu'l-maẓlūmūn", "translation": { "en": "O He in Whom the oppressed find justice", "tr": "Ey mazlumların yardım dilediği" } },
+        { "arabic": "يَا مَنْ يَطْمَئِنُّ إِلَيْهِ الْمُؤْمِنُونَ", "transliteration": "Yā Man yaṭma'innu ilayhi'l-mu'minūn", "translation": { "en": "O He in Whom the believers find tranquility", "tr": "Ey müminlerin huzur bulduğu" } },
+        { "arabic": "يَا مَنْ يَتُوبُ إِلَيْهِ التَّائِبُونَ", "transliteration": "Yā Man yatūbu ilayhi't-tā'ibūn", "translation": { "en": "O He in Whom the repentant find acceptance", "tr": "Ey tövbe edenlerin döndüğü" } },
+        { "arabic": "يَا مَنْ يَجِدُ عِنْدَهُ السَّائِلُونَ", "transliteration": "Yā Man yajidu 'indahu's-sā'ilūn", "translation": { "en": "O He in Whom the asking ones find generosity", "tr": "Ey isteyenlerin cömertlik bulduğu" } },
+        { "arabic": "يَا مَنْ يَتَقَوَّى بِهِ الضُّعَفَاءُ", "transliteration": "Yā Man yataqawwā bihi'ḍ-ḍu'afā'", "translation": { "en": "O He in Whom the weak find strength", "tr": "Ey zayıfların güç bulduğu" } },
+        { "arabic": "يَا مَنْ يَسْتَغْنِي بِهِ الْمُحْتَاجُونَ", "transliteration": "Yā Man yastaghni bihi'l-muḥtājūn", "translation": { "en": "O He in Whom the needy find sufficiency", "tr": "Ey muhtaçların zenginlik bulduğu" } }
+      ],
+      "closing": { "arabic": "سُبْحَانَكَ يَا لَا إِلٰهَ إِلَّا أَنْتَ الْأَمَانَ الْأَمَانَ خَلِّصْنَا مِنَ النَّارِ", "transliteration": "Subḥānaka yā lā ilāha illā anta al-amān al-amān khalliṣnā mina'n-nār", "translation": { "en": "Glory be to You, there is no god but You. Safety, safety! Deliver us from the Fire.", "tr": "Sen her türlü eksiklikten münezzehsin. Senden başka ilah yoktur. Emân ver bize, emân ver. Bizi cehennemden kurtar." } }
+    },
+    {
+      "id": 58,
+      "lines": [
+        { "arabic": "يَا مَنْ خَلَقَ السَّمَاوَاتِ بِغَيْرِ عَمَدٍ", "transliteration": "Yā Man khalaqa's-samāwāti bi ghayri 'amad", "translation": { "en": "O He Who created the heavens without pillars", "tr": "Ey gökleri direksiz yaratan" } },
+        { "arabic": "يَا مَنْ بَسَطَ الْأَرْضَ مِهَادًا", "transliteration": "Yā Man basaṭa'l-arḍa mihādā", "translation": { "en": "O He Who spread the earth as a dwelling", "tr": "Ey yeryüzünü döşek gibi yayan" } },
+        { "arabic": "يَا مَنْ جَعَلَ الْجِبَالَ أَوْتَادًا", "transliteration": "Yā Man ja'ala'l-jibāla awtādā", "translation": { "en": "O He Who placed the mountains as pegs", "tr": "Ey dağları birer kazık kılan" } },
+        { "arabic": "يَا مَنْ جَعَلَ الشَّمْسَ سِرَاجًا", "transliteration": "Yā Man ja'ala'sh-shamsa sirājā", "translation": { "en": "O He Who made the sun a lamp", "tr": "Ey güneşi bir lamba kılan" } },
+        { "arabic": "يَا مَنْ جَعَلَ الْقَمَرَ نُورًا", "transliteration": "Yā Man ja'ala'l-qamara nūrā", "translation": { "en": "O He Who made the moon a light", "tr": "Ey ayı bir nur kılan" } },
+        { "arabic": "يَا مَنْ جَعَلَ النُّجُومَ هِدَايَةً", "transliteration": "Yā Man ja'ala'n-nujūma hidāya", "translation": { "en": "O He Who made the stars for guidance", "tr": "Ey yıldızları hidayet vesilesi kılan" } },
+        { "arabic": "يَا مَنْ سَخَّرَ الْبَحْرَ", "transliteration": "Yā Man sakhkhara'l-baḥr", "translation": { "en": "O He Who made the sea serviceable", "tr": "Ey denizi hizmete veren" } },
+        { "arabic": "يَا مَنْ أَجْرَى الْأَنْهَارَ", "transliteration": "Yā Man ajra'l-anhār", "translation": { "en": "O He Who made the rivers flow", "tr": "Ey nehirleri akıtan" } },
+        { "arabic": "يَا مَنْ فَجَّرَ الْعُيُونَ", "transliteration": "Yā Man fajjara'l-'uyūn", "translation": { "en": "O He Who made the springs gush forth", "tr": "Ey pınarları fışkırtan" } },
+        { "arabic": "يَا مَنْ خَلَقَ كُلَّ شَيْءٍ أَزْوَاجًا", "transliteration": "Yā Man khalaqa kulla shay'in azwājā", "translation": { "en": "O He Who created everything in pairs", "tr": "Ey her şeyi çift yaratan" } }
+      ],
+      "closing": { "arabic": "سُبْحَانَكَ يَا لَا إِلٰهَ إِلَّا أَنْتَ الْأَمَانَ الْأَمَانَ خَلِّصْنَا مِنَ النَّارِ", "transliteration": "Subḥānaka yā lā ilāha illā anta al-amān al-amān khalliṣnā mina'n-nār", "translation": { "en": "Glory be to You, there is no god but You. Safety, safety! Deliver us from the Fire.", "tr": "Sen her türlü eksiklikten münezzehsin. Senden başka ilah yoktur. Emân ver bize, emân ver. Bizi cehennemden kurtar." } }
+    },
+    {
+      "id": 59,
+      "lines": [
+        { "arabic": "يَا مَنْ أَحَاطَ عِلْمُهُ بِكُلِّ شَيْءٍ", "transliteration": "Yā Man aḥāṭa 'ilmuhū bi kulli shay'", "translation": { "en": "O He Whose knowledge encompasses all things", "tr": "Ey ilmi her şeyi kuşatan" } },
+        { "arabic": "يَا مَنْ وَسِعَ حِلْمُهُ الْمُذْنِبِينَ", "transliteration": "Yā Man wasi'a ḥilmuhū'l-mudhnibīn", "translation": { "en": "O He Whose patience encompasses the sinners", "tr": "Ey hilmi günahkârları kuşatan" } },
+        { "arabic": "يَا مَنْ شَمِلَ كَرَمُهُ الْمُحْتَاجِينَ", "transliteration": "Yā Man shamila karamuhū'l-muḥtājīn", "translation": { "en": "O He Whose generosity encompasses the needy", "tr": "Ey keremi muhtaçları kuşatan" } },
+        { "arabic": "يَا مَنْ عَمَّتْ نِعَمُهُ الْخَلَائِقَ", "transliteration": "Yā Man 'ammat ni'amuhū'l-khalā'iq", "translation": { "en": "O He Whose blessings encompass all creation", "tr": "Ey nimetleri tüm yaratılmışları kaplayan" } },
+        { "arabic": "يَا مَنْ لَا يَنْتَهِي مُلْكُهُ", "transliteration": "Yā Man lā yantahī mulkuh", "translation": { "en": "O He Whose kingdom has no end", "tr": "Ey mülkü sona ermeyen" } },
+        { "arabic": "يَا مَنْ لَا حَدَّ لِجَلَالِهِ", "transliteration": "Yā Man lā ḥadda li jalālih", "translation": { "en": "O He Whose glory has no limit", "tr": "Ey celâlinin sınırı olmayan" } },
+        { "arabic": "يَا مَنْ لَا يُوصَفُ كَمَالُهُ", "transliteration": "Yā Man lā yūṣafu kamāluh", "translation": { "en": "O He Whose perfection cannot be described", "tr": "Ey kemâli tarif edilemeyen" } },
+        { "arabic": "يَا مَنْ لَا يُدْرَكُ عَظَمَتُهُ", "transliteration": "Yā Man lā yudraku 'aẓamatuh", "translation": { "en": "O He Whose grandeur cannot be perceived", "tr": "Ey azameti idrak edilemeyen" } },
+        { "arabic": "يَا مَنْ لَا يُرَدُّ قَضَاؤُهُ", "transliteration": "Yā Man lā yuraddu qaḍā'uh", "translation": { "en": "O He Whose decree cannot be repelled", "tr": "Ey kazası geri çevrilemeyen" } },
+        { "arabic": "يَا مَنْ لَا تُحْصَى صِفَاتُهُ", "transliteration": "Yā Man lā tuḥṣā ṣifātuh", "translation": { "en": "O He Whose attributes cannot be enumerated", "tr": "Ey sıfatları sayılamayan" } }
+      ],
+      "closing": { "arabic": "سُبْحَانَكَ يَا لَا إِلٰهَ إِلَّا أَنْتَ الْأَمَانَ الْأَمَانَ خَلِّصْنَا مِنَ النَّارِ", "transliteration": "Subḥānaka yā lā ilāha illā anta al-amān al-amān khalliṣnā mina'n-nār", "translation": { "en": "Glory be to You, there is no god but You. Safety, safety! Deliver us from the Fire.", "tr": "Sen her türlü eksiklikten münezzehsin. Senden başka ilah yoktur. Emân ver bize, emân ver. Bizi cehennemden kurtar." } }
+    },
+    {
+      "id": 60,
+      "lines": [
+        { "arabic": "يَا مَنْ يُعْطِي مَنْ سَأَلَهُ", "transliteration": "Yā Man yu'ṭī man sa'alah", "translation": { "en": "O He Who gives to those who ask", "tr": "Ey isteyene veren" } },
+        { "arabic": "يَا مَنْ يُعْطِي مَنْ لَمْ يَسْأَلْهُ تَفَضُّلًا", "transliteration": "Yā Man yu'ṭī man lam yas'alhu tafaḍḍulā", "translation": { "en": "O He Who gives to those who do not ask, out of His mercy", "tr": "Ey istemeyene de lütufla veren" } },
+        { "arabic": "يَا مَنْ يُعْطِي الْفَرَجَ بَعْدَ الشِّدَّةِ", "transliteration": "Yā Man yu'ṭī'l-faraja ba'da'sh-shidda", "translation": { "en": "O He Who gives comfort after hardship", "tr": "Ey sıkıntıdan sonra ferahlık veren" } },
+        { "arabic": "يَا مَنْ يُعْطِي الْهُدَى بَعْدَ الضَّلَالَةِ", "transliteration": "Yā Man yu'ṭī'l-hudā ba'da'ḍ-ḍalāla", "translation": { "en": "O He Who gives guidance after misguidance", "tr": "Ey sapkınlıktan sonra hidayet veren" } },
+        { "arabic": "يَا مَنْ يُعْطِي الْعَفْوَ بَعْدَ الذَّنْبِ", "transliteration": "Yā Man yu'ṭī'l-'afwa ba'da'dh-dhanb", "translation": { "en": "O He Who gives pardon after sin", "tr": "Ey günahtan sonra af veren" } },
+        { "arabic": "يَا مَنْ يُعْطِي النِّعَمَ بِغَيْرِ سُؤَالٍ", "transliteration": "Yā Man yu'ṭī'n-ni'ama bi ghayri su'āl", "translation": { "en": "O He Who gives blessings without being asked", "tr": "Ey istenmeden nimet veren" } },
+        { "arabic": "يَا أَكْرَمَ الْأَكْرَمِينَ", "transliteration": "Yā Akrama'l-akramīn", "translation": { "en": "O He Who is the most Generous of the generous", "tr": "Ey cömertlerin en cömerdi" } },
+        { "arabic": "يَا أَعْلَمَ الْعَالِمِينَ", "transliteration": "Yā A'lama'l-'ālamīn", "translation": { "en": "O He Who is the most Knowing of the knowledgeable", "tr": "Ey bilenlerin en bileni" } },
+        { "arabic": "يَا أَقْدَرَ الْقَادِرِينَ", "transliteration": "Yā Aqdara'l-qādirīn", "translation": { "en": "O He Who is the most Powerful of the powerful", "tr": "Ey güçlülerin en güçlüsü" } },
+        { "arabic": "يَا أَرْحَمَ الرَّاحِمِينَ", "transliteration": "Yā Arḥama'r-rāḥimīn", "translation": { "en": "O He Who is the most Merciful of those who show mercy", "tr": "Ey merhamet edenlerin en merhametlisi" } }
+      ],
+      "closing": { "arabic": "سُبْحَانَكَ يَا لَا إِلٰهَ إِلَّا أَنْتَ الْأَمَانَ الْأَمَانَ خَلِّصْنَا مِنَ النَّارِ", "transliteration": "Subḥānaka yā lā ilāha illā anta al-amān al-amān khalliṣnā mina'n-nār", "translation": { "en": "Glory be to You, there is no god but You. Safety, safety! Deliver us from the Fire.", "tr": "Sen her türlü eksiklikten münezzehsin. Senden başka ilah yoktur. Emân ver bize, emân ver. Bizi cehennemden kurtar." } }
+    },
+    {
+      "id": 61,
+      "lines": [
+        { "arabic": "يَا بَدِيعَ السَّمَاوَاتِ", "transliteration": "Yā Badī'a's-samāwāt", "translation": { "en": "O Originator of the heavens", "tr": "Ey göklerin yaratıcısı" } },
+        { "arabic": "يَا جَاعِلَ الظُّلُمَاتِ وَالنُّورِ", "transliteration": "Yā Jā'ila'ẓ-ẓulumāti wa'n-nūr", "translation": { "en": "O Creator of darkness and light", "tr": "Ey karanlıkları ve nuru yaratan" } },
+        { "arabic": "يَا ذَا الْعِزَّةِ وَالْكَرَمِ", "transliteration": "Yā Dha'l-'izzati wa'l-karam", "translation": { "en": "O Author of glory and generosity", "tr": "Ey izzet ve kerem sahibi" } },
+        { "arabic": "يَا ذَا الْجَلَالِ وَالْجَمَالِ", "transliteration": "Yā Dha'l-jalāli wa'l-jamāl", "translation": { "en": "O Author of majesty and beauty", "tr": "Ey celâl ve cemâl sahibi" } },
+        { "arabic": "يَا مَنْ لَا صَاحِبَةَ لَهُ وَلَا وَلَدٌ", "transliteration": "Yā Man lā ṣāḥibata lahū wa lā walad", "translation": { "en": "O He Who has no consort and no child", "tr": "Ey eşi ve çocuğu olmayan" } },
+        { "arabic": "يَا مَنْ لَا شَرِيكَ لَهُ فِي الْمُلْكِ", "transliteration": "Yā Man lā sharīka lahū fi'l-mulk", "translation": { "en": "O He Who has no partner in sovereignty", "tr": "Ey mülkünde ortağı olmayan" } },
+        { "arabic": "يَا مَنْ لَا وَزِيرَ لَهُ فِي سُلْطَانِهِ", "transliteration": "Yā Man lā wazīra lahū fī sulṭānih", "translation": { "en": "O He Who has no minister in His authority", "tr": "Ey saltanatında veziri olmayan" } },
+        { "arabic": "يَا مَنْ لَا مُشِيرَ لَهُ فِي حُكْمِهِ", "transliteration": "Yā Man lā mushīra lahū fī ḥukmih", "translation": { "en": "O He Who has no advisor in His rule", "tr": "Ey hükmünde müşaviri olmayan" } },
+        { "arabic": "يَا مَنْ لَا مَثِيلَ لَهُ فِي خَلْقِهِ", "transliteration": "Yā Man lā mathīla lahū fī khalqih", "translation": { "en": "O He Who has no likeness in His creation", "tr": "Ey yaratılışında benzeri olmayan" } },
+        { "arabic": "يَا مَنْ لَا نَظِيرَ لَهُ فِي وُجُودِهِ", "transliteration": "Yā Man lā naẓīra lahū fī wujūdih", "translation": { "en": "O He Who has no equal in His existence", "tr": "Ey varlığında dengi olmayan" } }
+      ],
+      "closing": { "arabic": "سُبْحَانَكَ يَا لَا إِلٰهَ إِلَّا أَنْتَ الْأَمَانَ الْأَمَانَ خَلِّصْنَا مِنَ النَّارِ", "transliteration": "Subḥānaka yā lā ilāha illā anta al-amān al-amān khalliṣnā mina'n-nār", "translation": { "en": "Glory be to You, there is no god but You. Safety, safety! Deliver us from the Fire.", "tr": "Sen her türlü eksiklikten münezzehsin. Senden başka ilah yoktur. Emân ver bize, emân ver. Bizi cehennemden kurtar." } }
+    },
+    {
+      "id": 62,
+      "lines": [
+        { "arabic": "يَا مَنْ لَا تَنْقُصُ خَزَائِنُهُ", "transliteration": "Yā Man lā tanquṣu khazā'inuh", "translation": { "en": "O He Whose treasures never diminish", "tr": "Ey hazineleri eksilmeyen" } },
+        { "arabic": "يَا مَنْ لَا يَنْتَهِي مُلْكُهُ", "transliteration": "Yā Man lā yantahī mulkuh", "translation": { "en": "O He Whose kingdom never ends", "tr": "Ey mülkü bitmeyen" } },
+        { "arabic": "يَا مَنْ لَا تُحْصَى نِعَمُهُ", "transliteration": "Yā Man lā tuḥṣā ni'amuh", "translation": { "en": "O He Whose blessings cannot be counted", "tr": "Ey nimetleri sayılamayan" } },
+        { "arabic": "يَا مَنْ لَا تُسْبَرُ حِكْمَتُهُ", "transliteration": "Yā Man lā tusbaru ḥikmatuh", "translation": { "en": "O He Whose wisdom cannot be fathomed", "tr": "Ey hikmeti anlaşılamayan" } },
+        { "arabic": "يَا مَنْ لَا تُقَدَّرُ رَحْمَتُهُ", "transliteration": "Yā Man lā tuqaddaru raḥmatuh", "translation": { "en": "O He Whose mercy cannot be measured", "tr": "Ey rahmeti ölçülemeyen" } },
+        { "arabic": "يَا مَنْ لَا يُكَافَأُ كَرَمُهُ", "transliteration": "Yā Man lā yukāfa'u karamuh", "translation": { "en": "O He Whose generosity cannot be repaid", "tr": "Ey keremi karşılığı ödenemeyecek olan" } },
+        { "arabic": "يَا مَنْ لَا يُغْلَبُ قُدْرَتُهُ", "transliteration": "Yā Man lā yughlabu qudratuh", "translation": { "en": "O He Whose power cannot be overcome", "tr": "Ey kudreti mağlup edilemeyen" } },
+        { "arabic": "يَا مَنْ لَا يُنَازَعُ سُلْطَانُهُ", "transliteration": "Yā Man lā yunāza'u sulṭānuh", "translation": { "en": "O He Whose authority cannot be challenged", "tr": "Ey saltanatına karşı gelinemeyen" } },
+        { "arabic": "يَا مَنْ لَا تُدْرَكُ صِفَاتُهُ", "transliteration": "Yā Man lā tudraku ṣifātuh", "translation": { "en": "O He Whose attributes cannot be comprehended", "tr": "Ey sıfatları kavranamayan" } },
+        { "arabic": "يَا مَنْ لَا تُتَخَيَّلُ عَظَمَتُهُ", "transliteration": "Yā Man lā tutakhayyalu 'aẓamatuh", "translation": { "en": "O He Whose greatness cannot be imagined", "tr": "Ey büyüklüğü hayal edilemeyen" } }
+      ],
+      "closing": { "arabic": "سُبْحَانَكَ يَا لَا إِلٰهَ إِلَّا أَنْتَ الْأَمَانَ الْأَمَانَ خَلِّصْنَا مِنَ النَّارِ", "transliteration": "Subḥānaka yā lā ilāha illā anta al-amān al-amān khalliṣnā mina'n-nār", "translation": { "en": "Glory be to You, there is no god but You. Safety, safety! Deliver us from the Fire.", "tr": "Sen her türlü eksiklikten münezzehsin. Senden başka ilah yoktur. Emân ver bize, emân ver. Bizi cehennemden kurtar." } }
+    },
+    {
+      "id": 63,
+      "lines": [
+        { "arabic": "يَا اللّٰهُ يَا رَحْمٰنُ", "transliteration": "Yā Allāhu yā Raḥmān", "translation": { "en": "O Allah, O Most Merciful", "tr": "Ey Allah, ey Rahmân" } },
+        { "arabic": "يَا رَحِيمُ يَا قُدُّوسُ", "transliteration": "Yā Raḥīmu yā Quddūs", "translation": { "en": "O Most Compassionate, O Most Holy", "tr": "Ey Rahîm, ey Kuddûs" } },
+        { "arabic": "يَا مَلِكُ يَا سَلَامُ", "transliteration": "Yā Maliku yā Salām", "translation": { "en": "O Sovereign, O Source of Peace", "tr": "Ey Melik, ey Selâm" } },
+        { "arabic": "يَا مُؤْمِنُ يَا مُهَيْمِنُ", "transliteration": "Yā Mu'minu yā Muhaymin", "translation": { "en": "O Guardian of Faith, O Protector", "tr": "Ey Mü'min, ey Müheymin" } },
+        { "arabic": "يَا عَزِيزُ يَا جَبَّارُ", "transliteration": "Yā 'Azīzu yā Jabbār", "translation": { "en": "O Almighty, O Compeller", "tr": "Ey Azîz, ey Cebbâr" } },
+        { "arabic": "يَا مُتَكَبِّرُ يَا خَالِقُ", "transliteration": "Yā Mutakabbiru yā Khāliq", "translation": { "en": "O Supreme, O Creator", "tr": "Ey Mütekebbir, ey Hâlık" } },
+        { "arabic": "يَا بَارِئُ يَا مُصَوِّرُ", "transliteration": "Yā Bāri'u yā Muṣawwir", "translation": { "en": "O Originator, O Fashioner", "tr": "Ey Bâri, ey Musavvir" } },
+        { "arabic": "يَا غَفَّارُ يَا قَهَّارُ", "transliteration": "Yā Ghaffāru yā Qahhār", "translation": { "en": "O Forgiver, O Subduer", "tr": "Ey Gaffâr, ey Kahhâr" } },
+        { "arabic": "يَا وَهَّابُ يَا رَزَّاقُ", "transliteration": "Yā Wahhābu yā Razzāq", "translation": { "en": "O Bestower, O Provider", "tr": "Ey Vehhâb, ey Rezzâk" } },
+        { "arabic": "يَا فَتَّاحُ يَا عَلَّامُ", "transliteration": "Yā Fattāḥu yā 'Allām", "translation": { "en": "O Opener, O All-Knowing", "tr": "Ey Fettâh, ey Allâm" } }
+      ],
+      "closing": { "arabic": "سُبْحَانَكَ يَا لَا إِلٰهَ إِلَّا أَنْتَ الْأَمَانَ الْأَمَانَ خَلِّصْنَا مِنَ النَّارِ", "transliteration": "Subḥānaka yā lā ilāha illā anta al-amān al-amān khalliṣnā mina'n-nār", "translation": { "en": "Glory be to You, there is no god but You. Safety, safety! Deliver us from the Fire.", "tr": "Sen her türlü eksiklikten münezzehsin. Senden başka ilah yoktur. Emân ver bize, emân ver. Bizi cehennemden kurtar." } }
+    },
+    {
+      "id": 64,
+      "lines": [
+        { "arabic": "يَا نُورَ السَّمَاوَاتِ وَالْأَرْضِ", "transliteration": "Yā Nūra's-samāwāti wa'l-arḍ", "translation": { "en": "O Light of the heavens and the earth", "tr": "Ey göklerin ve yerin nuru" } },
+        { "arabic": "يَا زَيْنَ السَّمَاوَاتِ وَالْأَرْضِ", "transliteration": "Yā Zayna's-samāwāti wa'l-arḍ", "translation": { "en": "O Beautifier of the heavens and the earth", "tr": "Ey göklerin ve yerin süsü" } },
+        { "arabic": "يَا خَالِقَ السَّمَاوَاتِ وَالْأَرْضِ", "transliteration": "Yā Khāliqa's-samāwāti wa'l-arḍ", "translation": { "en": "O Creator of the heavens and the earth", "tr": "Ey göklerin ve yerin yaratıcısı" } },
+        { "arabic": "يَا فَاطِرَ السَّمَاوَاتِ وَالْأَرْضِ", "transliteration": "Yā Fāṭira's-samāwāti wa'l-arḍ", "translation": { "en": "O Originator of the heavens and the earth", "tr": "Ey gökleri ve yeri yoktan var eden" } },
+        { "arabic": "يَا مُنَوِّرَ السَّمَاوَاتِ وَالْأَرْضِ", "transliteration": "Yā Munawwira's-samāwāti wa'l-arḍ", "translation": { "en": "O He Who illuminates the heavens and the earth", "tr": "Ey gökleri ve yeri nurlandıran" } },
+        { "arabic": "يَا مِفْتَاحَ السَّمَاوَاتِ وَالْأَرْضِ", "transliteration": "Yā Miftāḥa's-samāwāti wa'l-arḍ", "translation": { "en": "O Key of the heavens and the earth", "tr": "Ey göklerin ve yerin anahtarı" } },
+        { "arabic": "يَا مُدَبِّرَ السَّمَاوَاتِ وَالْأَرْضِ", "transliteration": "Yā Mudabbira's-samāwāti wa'l-arḍ", "translation": { "en": "O Designer of the heavens and the earth", "tr": "Ey gökleri ve yeri tedbir eden" } },
+        { "arabic": "يَا رَازِقَ السَّمَاوَاتِ وَالْأَرْضِ", "transliteration": "Yā Rāziqa's-samāwāti wa'l-arḍ", "translation": { "en": "O Provider for the heavens and the earth", "tr": "Ey göklerin ve yerin rızık vericisi" } },
+        { "arabic": "يَا رَبَّ السَّمَاوَاتِ وَالْأَرْضِ", "transliteration": "Yā Rabba's-samāwāti wa'l-arḍ", "translation": { "en": "O Lord of the heavens and the earth", "tr": "Ey göklerin ve yerin Rabbi" } },
+        { "arabic": "يَا مَالِكَ السَّمَاوَاتِ وَالْأَرْضِ", "transliteration": "Yā Mālika's-samāwāti wa'l-arḍ", "translation": { "en": "O Sovereign of the heavens and the earth", "tr": "Ey göklerin ve yerin mâliki" } }
+      ],
+      "closing": { "arabic": "سُبْحَانَكَ يَا لَا إِلٰهَ إِلَّا أَنْتَ الْأَمَانَ الْأَمَانَ خَلِّصْنَا مِنَ النَّارِ", "transliteration": "Subḥānaka yā lā ilāha illā anta al-amān al-amān khalliṣnā mina'n-nār", "translation": { "en": "Glory be to You, there is no god but You. Safety, safety! Deliver us from the Fire.", "tr": "Sen her türlü eksiklikten münezzehsin. Senden başka ilah yoktur. Emân ver bize, emân ver. Bizi cehennemden kurtar." } }
+    },
+    {
+      "id": 65,
+      "lines": [
+        { "arabic": "يَا لَطِيفًا لَا يَقْسُو", "transliteration": "Yā Laṭīfan lā yaqsū", "translation": { "en": "O Gentle One Who is not harsh", "tr": "Ey katılaşmayan Latîf" } },
+        { "arabic": "يَا حَلِيمًا لَا يَعْجَلُ", "transliteration": "Yā Ḥalīman lā ya'jal", "translation": { "en": "O Patient One Who is not hasty", "tr": "Ey acele etmeyen Halîm" } },
+        { "arabic": "يَا كَرِيمًا لَا يَبْخَلُ", "transliteration": "Yā Karīman lā yabkhal", "translation": { "en": "O Generous One Who is not stingy", "tr": "Ey cimrilik etmeyen Kerîm" } },
+        { "arabic": "يَا حَكِيمًا لَا يَعْبَثُ", "transliteration": "Yā Ḥakīman lā ya'bath", "translation": { "en": "O Wise One Who is not frivolous", "tr": "Ey abes iş yapmayan Hakîm" } },
+        { "arabic": "يَا قَيُّومًا لَا يَنَامُ", "transliteration": "Yā Qayyūman lā yanām", "translation": { "en": "O Eternal One Who does not sleep", "tr": "Ey uyumayan Kayyûm" } },
+        { "arabic": "يَا صَمَدًا لَا يَأْكُلُ", "transliteration": "Yā Ṣamadan lā ya'kul", "translation": { "en": "O Self-Subsisting Who does not eat", "tr": "Ey yemeyen Samed" } },
+        { "arabic": "يَا قَوِيًّا لَا يَتْعَبُ", "transliteration": "Yā Qawiyyan lā yat'ab", "translation": { "en": "O Powerful One Who does not tire", "tr": "Ey yorulmayan Kavî" } },
+        { "arabic": "يَا كَبِيرًا لَا يَصْغُرُ", "transliteration": "Yā Kabīran lā yaṣghur", "translation": { "en": "O Great One Who is not small", "tr": "Ey küçülmeyen Kebîr" } },
+        { "arabic": "يَا عَزِيزًا لَا يَضْعُفُ", "transliteration": "Yā 'Azīzan lā yaḍ'uf", "translation": { "en": "O Mighty One Who is not weak", "tr": "Ey zayıflamayan Azîz" } },
+        { "arabic": "يَا مُعْطِيًا لَا يَمْنَعُ", "transliteration": "Yā Mu'ṭiyan lā yamna'", "translation": { "en": "O Giver Who does not withhold", "tr": "Ey esirgemeden veren Mu'tî" } }
+      ],
+      "closing": { "arabic": "سُبْحَانَكَ يَا لَا إِلٰهَ إِلَّا أَنْتَ الْأَمَانَ الْأَمَانَ خَلِّصْنَا مِنَ النَّارِ", "transliteration": "Subḥānaka yā lā ilāha illā anta al-amān al-amān khalliṣnā mina'n-nār", "translation": { "en": "Glory be to You, there is no god but You. Safety, safety! Deliver us from the Fire.", "tr": "Sen her türlü eksiklikten münezzehsin. Senden başka ilah yoktur. Emân ver bize, emân ver. Bizi cehennemden kurtar." } }
+    },
+    {
+      "id": 66,
+      "lines": [
+        { "arabic": "يَا مَنْ يَرَى وَلَا يُرَى", "transliteration": "Yā Man yarā wa lā yurā", "translation": { "en": "O He Who sees but is not seen", "tr": "Ey gören fakat görülmeyen" } },
+        { "arabic": "يَا مَنْ يَخْلُقُ وَلَا يُخْلَقُ", "transliteration": "Yā Man yakhluqu wa lā yukhlaq", "translation": { "en": "O He Who creates but is not created", "tr": "Ey yaratan fakat yaratılmayan" } },
+        { "arabic": "يَا مَنْ يَهْدِي وَلَا يُهْدَى", "transliteration": "Yā Man yahdī wa lā yuhdā", "translation": { "en": "O He Who guides but is not guided", "tr": "Ey hidayet eden fakat hidayete muhtaç olmayan" } },
+        { "arabic": "يَا مَنْ يُحْيِي وَلَا يَمُوتُ", "transliteration": "Yā Man yuḥyī wa lā yamūt", "translation": { "en": "O He Who gives life but does not die", "tr": "Ey hayat veren fakat ölmeyen" } },
+        { "arabic": "يَا مَنْ يُسْأَلُ وَيُعْطِي", "transliteration": "Yā Man yus'alu wa yu'ṭī", "translation": { "en": "O He Who is asked and grants", "tr": "Ey istenen ve veren" } },
+        { "arabic": "يَا مَنْ يُطْعِمُ وَلَا يُطْعَمُ", "transliteration": "Yā Man yuṭ'imu wa lā yuṭ'am", "translation": { "en": "O He Who feeds but is not fed", "tr": "Ey yediren fakat yedirilmeyen" } },
+        { "arabic": "يَا مَنْ يُجِيرُ وَلَا يُجَارُ عَلَيْهِ", "transliteration": "Yā Man yujīru wa lā yujāru 'alayh", "translation": { "en": "O He Who protects but needs no protection", "tr": "Ey koruyan fakat korunmaya muhtaç olmayan" } },
+        { "arabic": "يَا مَنْ يَقْضِي وَلَا يُقْضَى عَلَيْهِ", "transliteration": "Yā Man yaqḍī wa lā yuqḍā 'alayh", "translation": { "en": "O He Who decrees and none decrees over Him", "tr": "Ey hükmeden ve Kendisine hükmedilmeyen" } },
+        { "arabic": "يَا مَنْ يَحْكُمُ وَلَا يُحْكَمُ عَلَيْهِ", "transliteration": "Yā Man yaḥkumu wa lā yuḥkamu 'alayh", "translation": { "en": "O He Who judges and none judges over Him", "tr": "Ey yargılayan ve yargılanmayan" } },
+        { "arabic": "يَا مَنْ لَمْ يَلِدْ وَلَمْ يُولَدْ", "transliteration": "Yā Man lam yalid wa lam yūlad", "translation": { "en": "O He Who begets not and is not begotten", "tr": "Ey doğurmayan ve doğurulmayan" } }
+      ],
+      "closing": { "arabic": "سُبْحَانَكَ يَا لَا إِلٰهَ إِلَّا أَنْتَ الْأَمَانَ الْأَمَانَ خَلِّصْنَا مِنَ النَّارِ", "transliteration": "Subḥānaka yā lā ilāha illā anta al-amān al-amān khalliṣnā mina'n-nār", "translation": { "en": "Glory be to You, there is no god but You. Safety, safety! Deliver us from the Fire.", "tr": "Sen her türlü eksiklikten münezzehsin. Senden başka ilah yoktur. Emân ver bize, emân ver. Bizi cehennemden kurtar." } }
+    },
+    {
+      "id": 67,
+      "lines": [
+        { "arabic": "يَا أَرْفَعَ الرَّافِعِينَ", "transliteration": "Yā Arfa'a'r-rāfi'īn", "translation": { "en": "O Most Exalted of the exalted", "tr": "Ey yüceltenlerin en yücesi" } },
+        { "arabic": "يَا أَكْرَمَ الْأَكْرَمِينَ", "transliteration": "Yā Akrama'l-akramīn", "translation": { "en": "O Most Generous of the generous", "tr": "Ey cömertlerin en cömerdi" } },
+        { "arabic": "يَا أَرْحَمَ الرَّاحِمِينَ", "transliteration": "Yā Arḥama'r-rāḥimīn", "translation": { "en": "O Most Merciful of the merciful", "tr": "Ey merhametlilerin en merhametlisi" } },
+        { "arabic": "يَا أَعْلَمَ الْعَالِمِينَ", "transliteration": "Yā A'lama'l-'ālamīn", "translation": { "en": "O Most Knowing of the knowledgeable", "tr": "Ey bilenlerin en bilgini" } },
+        { "arabic": "يَا أَحْكَمَ الْحَاكِمِينَ", "transliteration": "Yā Aḥkama'l-ḥākimīn", "translation": { "en": "O Most Wise of the wise", "tr": "Ey hâkimlerin en hikmetlisi" } },
+        { "arabic": "يَا أَقْدَمَ الْقَادِمِينَ", "transliteration": "Yā Aqdama'l-qādimīn", "translation": { "en": "O Most Ancient of the ancient", "tr": "Ey kadîmlerin en kadîmi" } },
+        { "arabic": "يَا أَعْظَمَ الْعَاظِمِينَ", "transliteration": "Yā A'ẓama'l-'āẓimīn", "translation": { "en": "O Most Great of the great", "tr": "Ey büyüklerin en büyüğü" } },
+        { "arabic": "يَا أَلْطَفَ اللَّاطِفِينَ", "transliteration": "Yā Alṭafa'l-lāṭifīn", "translation": { "en": "O Most Gentle of the gentle", "tr": "Ey lütufkârların en lütufkârı" } },
+        { "arabic": "يَا أَقْدَرَ الْقَادِرِينَ", "transliteration": "Yā Aqdara'l-qādirīn", "translation": { "en": "O Most Powerful of the powerful", "tr": "Ey güçlülerin en güçlüsü" } },
+        { "arabic": "يَا أَجْوَدَ الْأَجْوَدِينَ", "transliteration": "Yā Ajwada'l-ajwadīn", "translation": { "en": "O Most Beneficent of the beneficent", "tr": "Ey cömertlerin en cömerdi" } }
+      ],
+      "closing": { "arabic": "سُبْحَانَكَ يَا لَا إِلٰهَ إِلَّا أَنْتَ الْأَمَانَ الْأَمَانَ خَلِّصْنَا مِنَ النَّارِ", "transliteration": "Subḥānaka yā lā ilāha illā anta al-amān al-amān khalliṣnā mina'n-nār", "translation": { "en": "Glory be to You, there is no god but You. Safety, safety! Deliver us from the Fire.", "tr": "Sen her türlü eksiklikten münezzehsin. Senden başka ilah yoktur. Emân ver bize, emân ver. Bizi cehennemden kurtar." } }
+    },
+    {
+      "id": 68,
+      "lines": [
+        { "arabic": "يَا مَنْ يَسْمَعُ كُلَّ صَوْتٍ", "transliteration": "Yā Man yasma'u kulla ṣawt", "translation": { "en": "O He Who hears all voices", "tr": "Ey bütün sesleri işiten" } },
+        { "arabic": "يَا مَنْ يُجِيبُ كُلَّ دَعْوَةٍ", "transliteration": "Yā Man yujību kulla da'wa", "translation": { "en": "O He Who answers all prayers", "tr": "Ey bütün duaları kabul eden" } },
+        { "arabic": "يَا مَنْ يَسْبِقُ كُلَّ شَيْءٍ", "transliteration": "Yā Man yasbiqu kulla shay'", "translation": { "en": "O He Who precedes all things", "tr": "Ey her şeyden önce olan" } },
+        { "arabic": "يَا مَنْ يُنْجِزُ كُلَّ وَعْدٍ", "transliteration": "Yā Man yunjizu kulla wa'd", "translation": { "en": "O He Who fulfills all promises", "tr": "Ey bütün vaatlerini yerine getiren" } },
+        { "arabic": "يَا مَنْ يُغْنِي كُلَّ فَقِيرٍ", "transliteration": "Yā Man yughnī kulla faqīr", "translation": { "en": "O He Who enriches all the poor", "tr": "Ey bütün fakirleri zenginleştiren" } },
+        { "arabic": "يَا مَنْ يَعْلَمُ كُلَّ سِرٍّ", "transliteration": "Yā Man ya'lamu kulla sirr", "translation": { "en": "O He Who knows all secrets", "tr": "Ey bütün sırları bilen" } },
+        { "arabic": "يَا مَنْ يُغِيثُ كُلَّ مُسْتَغِيثٍ", "transliteration": "Yā Man yughīthu kulla mustaghīth", "translation": { "en": "O He Who responds to all emergencies", "tr": "Ey bütün feryatçılara yetişen" } },
+        { "arabic": "يَا مَنْ لَهُ كُلُّ كَمَالٍ", "transliteration": "Yā Man lahū kullu kamāl", "translation": { "en": "O He Who possesses all perfection", "tr": "Ey bütün kemâllerin sahibi" } },
+        { "arabic": "يَا مَنْ لَهُ كُلُّ نِعْمَةٍ", "transliteration": "Yā Man lahū kullu ni'ma", "translation": { "en": "O He Who is the Bestower of all blessings", "tr": "Ey bütün nimetlerin sahibi" } },
+        { "arabic": "يَا مَنْ لَهُ كُلُّ فَضْلٍ", "transliteration": "Yā Man lahū kullu faḍl", "translation": { "en": "O He Who is the Source of all bounty", "tr": "Ey bütün faziletlerin kaynağı" } }
+      ],
+      "closing": { "arabic": "سُبْحَانَكَ يَا لَا إِلٰهَ إِلَّا أَنْتَ الْأَمَانَ الْأَمَانَ خَلِّصْنَا مِنَ النَّارِ", "transliteration": "Subḥānaka yā lā ilāha illā anta al-amān al-amān khalliṣnā mina'n-nār", "translation": { "en": "Glory be to You, there is no god but You. Safety, safety! Deliver us from the Fire.", "tr": "Sen her türlü eksiklikten münezzehsin. Senden başka ilah yoktur. Emân ver bize, emân ver. Bizi cehennemden kurtar." } }
+    },
+    {
+      "id": 69,
+      "lines": [
+        { "arabic": "يَا رَبَّ الْبَيْتِ الْحَرَامِ", "transliteration": "Yā Rabba'l-Bayti'l-Ḥarām", "translation": { "en": "O Lord of the Sacred House", "tr": "Ey Beyt-i Harâm'ın Rabbi" } },
+        { "arabic": "يَا رَبَّ الشَّهْرِ الْحَرَامِ", "transliteration": "Yā Rabba'sh-Shahri'l-Ḥarām", "translation": { "en": "O Lord of the Sacred Month", "tr": "Ey haram ayın Rabbi" } },
+        { "arabic": "يَا رَبَّ الْبَلَدِ الْحَرَامِ", "transliteration": "Yā Rabba'l-Baladi'l-Ḥarām", "translation": { "en": "O Lord of the Sacred Land", "tr": "Ey Belde-i Harâm'ın Rabbi" } },
+        { "arabic": "يَا رَبَّ الرُّكْنِ وَالْمَقَامِ", "transliteration": "Yā Rabba'r-Rukni wa'l-Maqām", "translation": { "en": "O Lord of the Rukn and the Maqam", "tr": "Ey Rükn ve Makam'ın Rabbi" } },
+        { "arabic": "يَا رَبَّ الْمَشْعَرِ الْحَرَامِ", "transliteration": "Yā Rabba'l-Mash'ari'l-Ḥarām", "translation": { "en": "O Lord of the Mash'ar al-Haram", "tr": "Ey Meş'ar-i Harâm'ın Rabbi" } },
+        { "arabic": "يَا رَبَّ الْحَلَالِ وَالْحَرَامِ", "transliteration": "Yā Rabba'l-Ḥalāli wa'l-Ḥarām", "translation": { "en": "O Lord of the Halal and the Haram", "tr": "Ey helâl ve harâmın Rabbi" } },
+        { "arabic": "يَا رَبَّ النُّورِ وَالظَّلَامِ", "transliteration": "Yā Rabba'n-Nūri wa'ẓ-Ẓalām", "translation": { "en": "O Lord of light and darkness", "tr": "Ey nurun ve karanlığın Rabbi" } },
+        { "arabic": "يَا رَبَّ التَّحِيَّةِ وَالسَّلَامِ", "transliteration": "Yā Rabba't-Taḥiyyati wa's-Salām", "translation": { "en": "O Lord of greeting and peace", "tr": "Ey tahiyyat ve selâmın Rabbi" } },
+        { "arabic": "يَا رَبَّ الْقُدْرَةِ عَلَى الْخَلَائِقِ", "transliteration": "Yā Rabba'l-Qudrati 'ala'l-khalā'iq", "translation": { "en": "O Lord of power over all creation", "tr": "Ey tüm yaratılmışlara kudretinin Rabbi" } },
+        { "arabic": "يَا رَبَّ الْأَحْيَاءِ وَالْأَمْوَاتِ", "transliteration": "Yā Rabba'l-Aḥyā'i wa'l-Amwāt", "translation": { "en": "O Lord of the living and the dead", "tr": "Ey dirilerin ve ölülerin Rabbi" } }
+      ],
+      "closing": { "arabic": "سُبْحَانَكَ يَا لَا إِلٰهَ إِلَّا أَنْتَ الْأَمَانَ الْأَمَانَ خَلِّصْنَا مِنَ النَّارِ", "transliteration": "Subḥānaka yā lā ilāha illā anta al-amān al-amān khalliṣnā mina'n-nār", "translation": { "en": "Glory be to You, there is no god but You. Safety, safety! Deliver us from the Fire.", "tr": "Sen her türlü eksiklikten münezzehsin. Senden başka ilah yoktur. Emân ver bize, emân ver. Bizi cehennemden kurtar." } }
+    },
+    {
+      "id": 70,
+      "lines": [
+        { "arabic": "يَا مَنْ لَهُ الْقُدْرَةُ عَلَى كُلِّ شَيْءٍ", "transliteration": "Yā Man lahu'l-qudratu 'alā kulli shay'", "translation": { "en": "O He Who has power over all things", "tr": "Ey her şeye gücü yeten" } },
+        { "arabic": "يَا مَنْ يَعْلَمُ كُلَّ شَيْءٍ", "transliteration": "Yā Man ya'lamu kulla shay'", "translation": { "en": "O He Who knows all things", "tr": "Ey her şeyi bilen" } },
+        { "arabic": "يَا مَنْ يُدْرِكُ كُلَّ شَيْءٍ", "transliteration": "Yā Man yudriku kulla shay'", "translation": { "en": "O He Who perceives all things", "tr": "Ey her şeyi idrak eden" } },
+        { "arabic": "يَا مَنْ يُحِيطُ بِكُلِّ شَيْءٍ", "transliteration": "Yā Man yuḥīṭu bi kulli shay'", "translation": { "en": "O He Who encompasses all things", "tr": "Ey her şeyi kuşatan" } },
+        { "arabic": "يَا مَنْ هُوَ قَرِيبٌ مِنْ كُلِّ شَيْءٍ", "transliteration": "Yā Man huwa qarībun min kulli shay'", "translation": { "en": "O He Who is Near to all things", "tr": "Ey her şeye yakın olan" } },
+        { "arabic": "يَا مَنْ هُوَ شَهِيدٌ عَلَى كُلِّ شَيْءٍ", "transliteration": "Yā Man huwa shahīdun 'alā kulli shay'", "translation": { "en": "O He Who is Witness to all things", "tr": "Ey her şeye şâhit olan" } },
+        { "arabic": "يَا مَنْ هُوَ حَفِيظٌ عَلَى كُلِّ شَيْءٍ", "transliteration": "Yā Man huwa ḥafīẓun 'alā kulli shay'", "translation": { "en": "O He Who is Guardian over all things", "tr": "Ey her şeyi koruyan" } },
+        { "arabic": "يَا مَنْ هُوَ غَالِبٌ عَلَى كُلِّ شَيْءٍ", "transliteration": "Yā Man huwa ghālibun 'alā kulli shay'", "translation": { "en": "O He Who prevails over all things", "tr": "Ey her şeye galip gelen" } },
+        { "arabic": "يَا مَنْ هُوَ مُبْدِئُ كُلِّ شَيْءٍ", "transliteration": "Yā Man huwa Mubdi'u kulli shay'", "translation": { "en": "O He Who originates all things", "tr": "Ey her şeyi başlatan" } },
+        { "arabic": "يَا مَنْ هُوَ مُعِيدُ كُلِّ شَيْءٍ", "transliteration": "Yā Man huwa Mu'īdu kulli shay'", "translation": { "en": "O He Who returns all things", "tr": "Ey her şeyi iade eden" } }
+      ],
+      "closing": { "arabic": "سُبْحَانَكَ يَا لَا إِلٰهَ إِلَّا أَنْتَ الْأَمَانَ الْأَمَانَ خَلِّصْنَا مِنَ النَّارِ", "transliteration": "Subḥānaka yā lā ilāha illā anta al-amān al-amān khalliṣnā mina'n-nār", "translation": { "en": "Glory be to You, there is no god but You. Safety, safety! Deliver us from the Fire.", "tr": "Sen her türlü eksiklikten münezzehsin. Senden başka ilah yoktur. Emân ver bize, emân ver. Bizi cehennemden kurtar." } }
+    },
+    {
+      "id": 71,
+      "lines": [
+        { "arabic": "يَا غَافِرَ الذُّنُوبِ", "transliteration": "Yā Ghāfira'dh-dhunūb", "translation": { "en": "O Forgiver of sins", "tr": "Ey günahları bağışlayan" } },
+        { "arabic": "يَا كَاشِفَ الْكُرُوبِ", "transliteration": "Yā Kāshifa'l-kurūb", "translation": { "en": "O Remover of afflictions", "tr": "Ey sıkıntıları gideren" } },
+        { "arabic": "يَا مُنْتَهَى الْآمَالِ", "transliteration": "Yā Muntaha'l-āmāl", "translation": { "en": "O End of hopes", "tr": "Ey emellerin sonu" } },
+        { "arabic": "يَا مُجْزِلَ الْعَطَايَا", "transliteration": "Yā Mujzila'l-'aṭāyā", "translation": { "en": "O Giver of abundant gifts", "tr": "Ey bol bol ikram eden" } },
+        { "arabic": "يَا وَاهِبَ الْمَوَاهِبِ", "transliteration": "Yā Wāhiba'l-mawāhib", "translation": { "en": "O Bestower of blessings", "tr": "Ey lütufları bahşeden" } },
+        { "arabic": "يَا رَازِقَ الْخَلَائِقِ", "transliteration": "Yā Rāziqa'l-khalā'iq", "translation": { "en": "O Provider of sustenance to creation", "tr": "Ey yaratılmışlara rızık veren" } },
+        { "arabic": "يَا قَاضِيَ الْأَقْدَارِ", "transliteration": "Yā Qāḍiya'l-aqdār", "translation": { "en": "O Decreer of destinies", "tr": "Ey kaderleri takdir eden" } },
+        { "arabic": "يَا سَامِعَ الشَّكَاوَى", "transliteration": "Yā Sāmi'a'sh-shakāwā", "translation": { "en": "O Hearer of complaints", "tr": "Ey şikâyetleri işiten" } },
+        { "arabic": "يَا بَاعِثَ الرُّسُلِ", "transliteration": "Yā Bā'itha'r-rusul", "translation": { "en": "O Sender of messengers", "tr": "Ey peygamberleri gönderen" } },
+        { "arabic": "يَا مُطْلِقَ الْأُسَارَى", "transliteration": "Yā Muṭliqa'l-usārā", "translation": { "en": "O Liberator of captives", "tr": "Ey esirleri serbest bırakan" } }
+      ],
+      "closing": { "arabic": "سُبْحَانَكَ يَا لَا إِلٰهَ إِلَّا أَنْتَ الْأَمَانَ الْأَمَانَ خَلِّصْنَا مِنَ النَّارِ", "transliteration": "Subḥānaka yā lā ilāha illā anta al-amān al-amān khalliṣnā mina'n-nār", "translation": { "en": "Glory be to You, there is no god but You. Safety, safety! Deliver us from the Fire.", "tr": "Sen her türlü eksiklikten münezzehsin. Senden başka ilah yoktur. Emân ver bize, emân ver. Bizi cehennemden kurtar." } }
+    },
+    {
+      "id": 72,
+      "lines": [
+        { "arabic": "يَا مَحْمُودًا فِي أَفْعَالِهِ", "transliteration": "Yā Maḥmūdan fī af'ālih", "translation": { "en": "O Praised One in His actions", "tr": "Ey fiillerinde övülen" } },
+        { "arabic": "يَا مَجِيدًا فِي أَحْوَالِهِ", "transliteration": "Yā Majīdan fī aḥwālih", "translation": { "en": "O Magnificent in His ways", "tr": "Ey hâllerinde yüce olan" } },
+        { "arabic": "يَا عَزِيزًا فِي مُلْكِهِ", "transliteration": "Yā 'Azīzan fī mulkih", "translation": { "en": "O Glorious in His sovereignty", "tr": "Ey mülkünde aziz olan" } },
+        { "arabic": "يَا عَظِيمًا فِي كَرَمِهِ", "transliteration": "Yā 'Aẓīman fī karamih", "translation": { "en": "O Great in His generosity", "tr": "Ey kereminde azametli olan" } },
+        { "arabic": "يَا عَالِيًا فِي سُلْطَانِهِ", "transliteration": "Yā 'Āliyan fī sulṭānih", "translation": { "en": "O Exalted in His authority", "tr": "Ey saltanatında yüce olan" } },
+        { "arabic": "يَا قَدِيمًا قَبْلَ كُلِّ شَيْءٍ", "transliteration": "Yā Qadīman qabla kulli shay'", "translation": { "en": "O Ancient before anything existed", "tr": "Ey her şeyden önce var olan" } },
+        { "arabic": "يَا مُتَعَالِيًا فِي عُلُوِّهِ", "transliteration": "Yā Muta'āliyan fī 'uluwwih", "translation": { "en": "O Exalted in His supremacy", "tr": "Ey yüceliğinde müteal olan" } },
+        { "arabic": "يَا جَمِيلًا فِي رَحْمَتِهِ", "transliteration": "Yā Jamīlan fī raḥmatih", "translation": { "en": "O Beautiful in His mercy", "tr": "Ey rahmetinde güzel olan" } },
+        { "arabic": "يَا كَرِيمًا عَلَى عِبَادِهِ", "transliteration": "Yā Karīman 'alā 'ibādih", "translation": { "en": "O Generous to His servants", "tr": "Ey kullarına karşı kerîm olan" } },
+        { "arabic": "يَا قَادِرًا فِي قُوَّتِهِ", "transliteration": "Yā Qādiran fī quwwatih", "translation": { "en": "O Powerful in His strength", "tr": "Ey kuvvetinde kâdir olan" } }
+      ],
+      "closing": { "arabic": "سُبْحَانَكَ يَا لَا إِلٰهَ إِلَّا أَنْتَ الْأَمَانَ الْأَمَانَ خَلِّصْنَا مِنَ النَّارِ", "transliteration": "Subḥānaka yā lā ilāha illā anta al-amān al-amān khalliṣnā mina'n-nār", "translation": { "en": "Glory be to You, there is no god but You. Safety, safety! Deliver us from the Fire.", "tr": "Sen her türlü eksiklikten münezzehsin. Senden başka ilah yoktur. Emân ver bize, emân ver. Bizi cehennemden kurtar." } }
+    },
+    {
+      "id": 73,
+      "lines": [
+        { "arabic": "يَا كَافِيَ مَنِ اسْتَكْفَاهُ", "transliteration": "Yā Kāfiya mani'stakfāh", "translation": { "en": "O Sufficient for those who seek sufficiency", "tr": "Ey yetinmek isteyene yeten" } },
+        { "arabic": "يَا هَادِيَ مَنِ اسْتَهْدَاهُ", "transliteration": "Yā Hādiya mani'stahdāh", "translation": { "en": "O Guide for those who seek guidance", "tr": "Ey hidayet isteyene hidayet eden" } },
+        { "arabic": "يَا حَافِظَ مَنِ اسْتَحْفَظَهُ", "transliteration": "Yā Ḥāfiẓa mani'staḥfaẓah", "translation": { "en": "O Protector of those who seek protection", "tr": "Ey koruma isteyeni koruyan" } },
+        { "arabic": "يَا رَاحِمَ مَنِ اسْتَرْحَمَهُ", "transliteration": "Yā Rāḥima mani'starḥamah", "translation": { "en": "O Merciful to those who seek mercy", "tr": "Ey merhamet isteyene merhamet eden" } },
+        { "arabic": "يَا غَافِرَ مَنِ اسْتَغْفَرَهُ", "transliteration": "Yā Ghāfira mani'staghfarah", "translation": { "en": "O Forgiver of those who seek forgiveness", "tr": "Ey bağışlanma isteyeni bağışlayan" } },
+        { "arabic": "يَا نَاصِرَ مَنِ اسْتَنْصَرَهُ", "transliteration": "Yā Nāṣira mani'stanṣarah", "translation": { "en": "O Helper of those who seek help", "tr": "Ey yardım isteyene yardım eden" } },
+        { "arabic": "يَا مُغْنِيَ مَنِ اسْتَغْنَاهُ", "transliteration": "Yā Mughniya mani'staghnāh", "translation": { "en": "O Enricher of those who seek enrichment", "tr": "Ey zenginlik isteyeni zenginleştiren" } },
+        { "arabic": "يَا مَلْجَأَ مَنِ الْتَجَأَ إِلَيْهِ", "transliteration": "Yā Malja'a mani'ltaja'a ilayh", "translation": { "en": "O Refuge for those who seek refuge", "tr": "Ey sığınanlara sığınak olan" } },
+        { "arabic": "يَا مُنْجِيَ مَنِ اسْتَنْجَاهُ", "transliteration": "Yā Munjiya mani'stanjāh", "translation": { "en": "O Fulfiller for those who seek fulfillment", "tr": "Ey kurtuluş isteyeni kurtaran" } },
+        { "arabic": "يَا شَافِيَ مَنِ اسْتَشْفَاهُ", "transliteration": "Yā Shāfiya mani'stashfāh", "translation": { "en": "O Healer for those who seek healing", "tr": "Ey şifa isteyene şifa veren" } }
+      ],
+      "closing": { "arabic": "سُبْحَانَكَ يَا لَا إِلٰهَ إِلَّا أَنْتَ الْأَمَانَ الْأَمَانَ خَلِّصْنَا مِنَ النَّارِ", "transliteration": "Subḥānaka yā lā ilāha illā anta al-amān al-amān khalliṣnā mina'n-nār", "translation": { "en": "Glory be to You, there is no god but You. Safety, safety! Deliver us from the Fire.", "tr": "Sen her türlü eksiklikten münezzehsin. Senden başka ilah yoktur. Emân ver bize, emân ver. Bizi cehennemden kurtar." } }
+    },
+    {
+      "id": 74,
+      "lines": [
+        { "arabic": "يَا مَنْ لَا شَرِيكَ لَهُ", "transliteration": "Yā Man lā sharīka lah", "translation": { "en": "O He Who has no partner", "tr": "Ey ortağı olmayan" } },
+        { "arabic": "يَا مَنْ لَا نِدَّ لَهُ", "transliteration": "Yā Man lā nidda lah", "translation": { "en": "O He Who has no equal", "tr": "Ey dengi olmayan" } },
+        { "arabic": "يَا مَنْ لَا مِثْلَ لَهُ", "transliteration": "Yā Man lā mithla lah", "translation": { "en": "O He Who has no like", "tr": "Ey benzeri olmayan" } },
+        { "arabic": "يَا مَنْ لَا وَزِيرَ لَهُ", "transliteration": "Yā Man lā wazīra lah", "translation": { "en": "O He Who has no minister", "tr": "Ey veziri olmayan" } },
+        { "arabic": "يَا مَنْ لَا مُشِيرَ لَهُ", "transliteration": "Yā Man lā mushīra lah", "translation": { "en": "O He Who has no advisor", "tr": "Ey müşaviri olmayan" } },
+        { "arabic": "يَا مَنْ لَا ظَهِيرَ لَهُ", "transliteration": "Yā Man lā ẓahīra lah", "translation": { "en": "O He Who has no assistant", "tr": "Ey yardımcıya muhtaç olmayan" } },
+        { "arabic": "يَا مَنْ لَا ضِدَّ لَهُ", "transliteration": "Yā Man lā ḍidda lah", "translation": { "en": "O He Who has no rival", "tr": "Ey rakibi olmayan" } },
+        { "arabic": "يَا مَنْ لَا نَظِيرَ لَهُ", "transliteration": "Yā Man lā naẓīra lah", "translation": { "en": "O He Who has no match", "tr": "Ey eşi olmayan" } },
+        { "arabic": "يَا مَنْ لَا كُفُوَ لَهُ", "transliteration": "Yā Man lā kufuwa lah", "translation": { "en": "O He Who has no opposite", "tr": "Ey küfvü olmayan" } },
+        { "arabic": "يَا مَنْ لَا شَبِيهَ لَهُ", "transliteration": "Yā Man lā shabīha lah", "translation": { "en": "O He Who has no associate", "tr": "Ey şebihi olmayan" } }
+      ],
+      "closing": { "arabic": "سُبْحَانَكَ يَا لَا إِلٰهَ إِلَّا أَنْتَ الْأَمَانَ الْأَمَانَ خَلِّصْنَا مِنَ النَّارِ", "transliteration": "Subḥānaka yā lā ilāha illā anta al-amān al-amān khalliṣnā mina'n-nār", "translation": { "en": "Glory be to You, there is no god but You. Safety, safety! Deliver us from the Fire.", "tr": "Sen her türlü eksiklikten münezzehsin. Senden başka ilah yoktur. Emân ver bize, emân ver. Bizi cehennemden kurtar." } }
+    },
+    {
+      "id": 75,
+      "lines": [
+        { "arabic": "يَا خَالِقَ كُلِّ مَخْلُوقٍ", "transliteration": "Yā Khāliqa kulli makhlūq", "translation": { "en": "O Creator of all creation", "tr": "Ey tüm yaratılmışların yaratıcısı" } },
+        { "arabic": "يَا مَالِكَ كُلِّ مَمْلُوكٍ", "transliteration": "Yā Mālika kulli mamlūk", "translation": { "en": "O King of all kingdoms", "tr": "Ey tüm mülklerin sahibi" } },
+        { "arabic": "يَا رَازِقَ كُلِّ مَرْزُوقٍ", "transliteration": "Yā Rāziqa kulli marzūq", "translation": { "en": "O Provider for all provisions", "tr": "Ey tüm rızıklananların rızık vericisi" } },
+        { "arabic": "يَا مَالِكَ كُلِّ نَفْسٍ", "transliteration": "Yā Mālika kulli nafs", "translation": { "en": "O Owner of all souls", "tr": "Ey tüm nefislerin sahibi" } },
+        { "arabic": "يَا كَاشِفَ كُلِّ ضُرٍّ", "transliteration": "Yā Kāshifa kulli ḍurr", "translation": { "en": "O Remover of all difficulties", "tr": "Ey tüm sıkıntıları gideren" } },
+        { "arabic": "يَا سَامِعَ كُلِّ صَوْتٍ", "transliteration": "Yā Sāmi'a kulli ṣawt", "translation": { "en": "O Hearer of all sounds", "tr": "Ey tüm sesleri işiten" } },
+        { "arabic": "يَا شَاهِدَ كُلِّ مَشْهُودٍ", "transliteration": "Yā Shāhida kulli mashhūd", "translation": { "en": "O Witness to all creation", "tr": "Ey tüm meşhudların şahidi" } },
+        { "arabic": "يَا مُنَجِّيَ كُلِّ مُصِيبَةٍ", "transliteration": "Yā Munajjiya kulli muṣība", "translation": { "en": "O Rescuer from all calamities", "tr": "Ey tüm musibetlerden kurtaran" } },
+        { "arabic": "يَا حَاضِرَ كُلِّ مَجْلِسٍ", "transliteration": "Yā Ḥāḍira kulli majlis", "translation": { "en": "O Present in all gatherings", "tr": "Ey her mecliste hazır olan" } },
+        { "arabic": "يَا قَرِيبًا رَغْمَ عُلُوِّهِ", "transliteration": "Yā Qarīban raghma 'uluwwih", "translation": { "en": "O Near despite His exaltation", "tr": "Ey yüceliğine rağmen yakın olan" } }
+      ],
+      "closing": { "arabic": "سُبْحَانَكَ يَا لَا إِلٰهَ إِلَّا أَنْتَ الْأَمَانَ الْأَمَانَ خَلِّصْنَا مِنَ النَّارِ", "transliteration": "Subḥānaka yā lā ilāha illā anta al-amān al-amān khalliṣnā mina'n-nār", "translation": { "en": "Glory be to You, there is no god but You. Safety, safety! Deliver us from the Fire.", "tr": "Sen her türlü eksiklikten münezzehsin. Senden başka ilah yoktur. Emân ver bize, emân ver. Bizi cehennemden kurtar." } }
+    }
+  ]
+}
