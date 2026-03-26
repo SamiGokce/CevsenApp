@@ -236,7 +236,8 @@ export default function SettingsScreen() {
         </View>
       </ScrollView>
 
-      {/* About Modal */}
+      {/* About Modal — only mount when visible to avoid invisible overlay blocking taps */}
+      {aboutVisible && (
       <Modal
         visible={aboutVisible}
         animationType="slide"
@@ -275,6 +276,7 @@ export default function SettingsScreen() {
           </ScrollView>
         </SafeAreaView>
       </Modal>
+      )}
     </SafeAreaView>
   );
 }
