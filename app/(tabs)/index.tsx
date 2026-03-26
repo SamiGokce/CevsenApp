@@ -2,11 +2,35 @@ import { View, Text, StyleSheet, ScrollView, Pressable } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useRouter } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
+import { useState, useCallback } from "react";
+import { useFocusEffect } from "expo-router";
 import { Colors } from "../../constants/colors";
 import { Spacing, BorderRadius, Typography } from "../../constants/theme";
+import { getStats, getLastReadBab } from "../../utils/storage";
 
 export default function HomeScreen() {
   const router = useRouter();
+  const [stats, setStats] = useState({
+    streak: 0,
+    completions: 0,
+    babsRead: 0,
+  });
+  const [lastBab, setLastBab] = useState(1);
+
+  useFocusEffect(
+    useCallback(() => {
+      getStats().then((s) =>
+        setStats({
+          streak: s.streak,
+          completions: s.completions,
+          babsRead: s.babsRead,
+        })
+      );
+      getLastReadBab().then(setLastBab);
+    }, [])
+  );
+
+  const progressPct = Math.round((stats.babsRead / 99) * 100);
 
   return (
     <SafeAreaView style={styles.container}>
@@ -16,35 +40,60 @@ export default function HomeScreen() {
       >
         {/* Header */}
         <View style={styles.header}>
-          <Text style={styles.greeting}>Bismillah</Text>
+          <Text style={styles.greeting}>بِسْمِ اللّٰهِ</Text>
           <Text style={styles.subtitle}>Welcome to Cevşen</Text>
         </View>
 
-        {/* Streak Card */}
+        {/* Streak / Completions Card */}
         <View style={styles.streakCard}>
-          <View style={styles.streakIconContainer}>
-            <Ionicons name="flame" size={32} color={Colors.gold} />
-          </View>
-          <View style={styles.streakInfo}>
-            <Text style={styles.streakCount}>0</Text>
+          <View style={styles.streakItem}>
+            <Ionicons name="flame" size={28} color={Colors.gold} />
+            <Text style={styles.streakCount}>{stats.streak}</Text>
             <Text style={styles.streakLabel}>Day Streak</Text>
           </View>
-          <View style={styles.streakDivider} />
-          <View style={styles.streakInfo}>
-            <Text style={styles.streakCount}>0</Text>
+          <View style={styles.divider} />
+          <View style={styles.streakItem}>
+            <Ionicons name="trophy" size={28} color={Colors.gold} />
+            <Text style={styles.streakCount}>{stats.completions}</Text>
             <Text style={styles.streakLabel}>Completions</Text>
           </View>
+          <View style={styles.divider} />
+          <View style={styles.streakItem}>
+            <Ionicons name="book" size={28} color={Colors.tealSage} />
+            <Text style={styles.streakCount}>{stats.babsRead}/99</Text>
+            <Text style={styles.streakLabel}>Babs Read</Text>
+          </View>
         </View>
+
+        {/* Progress Bar */}
+        {stats.babsRead > 0 && (
+          <View style={styles.progressBarCard}>
+            <View style={styles.progressHeader}>
+              <Text style={styles.progressLabel}>Current cycle progress</Text>
+              <Text style={styles.progressPct}>{progressPct}%</Text>
+            </View>
+            <View style={styles.progressBarBg}>
+              <View
+                style={[
+                  styles.progressBarFill,
+                  { width: `${progressPct}%` as any },
+                ]}
+              />
+            </View>
+          </View>
+        )}
 
         {/* Continue Reading */}
         <Pressable
           style={styles.continueCard}
-          onPress={() => router.push("/bab/1")}
+          onPress={() => router.push(`/bab/${lastBab}`)}
         >
           <View style={styles.continueLeft}>
             <Text style={styles.continueLabel}>Continue Reading</Text>
-            <Text style={styles.continueTitle}>Bab 1</Text>
-            <Text style={styles.continueSubtitle}>Start your journey</Text>
+            <Text style={styles.continueTitle}>Bab {lastBab}</Text>
+            <Text style={styles.continueSubtitle}>
+              {lastBab === 1 ? "Begin your journey" : `Pick up where you left off`}
+            </Text>
           </View>
           <Ionicons
             name="arrow-forward-circle"
@@ -101,9 +150,10 @@ const styles = StyleSheet.create({
   },
   greeting: {
     fontSize: Typography.sizes.xxl,
-    fontWeight: "700",
+    fontFamily: "NotoNaskhArabic",
     color: Colors.text,
     marginBottom: Spacing.xs,
+    writingDirection: "rtl",
   },
   subtitle: {
     fontSize: Typography.sizes.md,
@@ -115,38 +165,63 @@ const styles = StyleSheet.create({
     padding: Spacing.lg,
     flexDirection: "row",
     alignItems: "center",
-    marginBottom: Spacing.lg,
+    marginBottom: Spacing.md,
     borderWidth: 1,
     borderColor: Colors.border,
   },
-  streakIconContainer: {
-    width: 56,
-    height: 56,
-    borderRadius: BorderRadius.full,
-    backgroundColor: Colors.background,
-    alignItems: "center",
-    justifyContent: "center",
-    marginRight: Spacing.md,
-  },
-  streakInfo: {
+  streakItem: {
     flex: 1,
     alignItems: "center",
+    gap: 4,
   },
   streakCount: {
-    fontSize: Typography.sizes.xl,
+    fontSize: Typography.sizes.lg,
     fontWeight: "700",
     color: Colors.text,
   },
   streakLabel: {
     fontSize: Typography.sizes.xs,
     color: Colors.textSecondary,
-    marginTop: 2,
+    textAlign: "center",
   },
-  streakDivider: {
+  divider: {
     width: 1,
-    height: 40,
+    height: 48,
     backgroundColor: Colors.border,
-    marginHorizontal: Spacing.sm,
+    marginHorizontal: Spacing.xs,
+  },
+  progressBarCard: {
+    backgroundColor: Colors.cardBg,
+    borderRadius: BorderRadius.lg,
+    padding: Spacing.md,
+    marginBottom: Spacing.md,
+    borderWidth: 1,
+    borderColor: Colors.border,
+  },
+  progressHeader: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    marginBottom: Spacing.sm,
+  },
+  progressLabel: {
+    fontSize: Typography.sizes.xs,
+    color: Colors.textSecondary,
+  },
+  progressPct: {
+    fontSize: Typography.sizes.xs,
+    fontWeight: "700",
+    color: Colors.tealSage,
+  },
+  progressBarBg: {
+    height: 6,
+    backgroundColor: Colors.border,
+    borderRadius: BorderRadius.full,
+    overflow: "hidden",
+  },
+  progressBarFill: {
+    height: "100%",
+    backgroundColor: Colors.tealSage,
+    borderRadius: BorderRadius.full,
   },
   continueCard: {
     backgroundColor: Colors.cardBg,

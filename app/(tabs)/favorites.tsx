@@ -1,24 +1,95 @@
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, FlatList, Pressable } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { useRouter } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
+import { useState, useCallback } from "react";
+import { useFocusEffect } from "expo-router";
 import { Colors } from "../../constants/colors";
-import { Spacing, Typography } from "../../constants/theme";
+import { Spacing, BorderRadius, Typography } from "../../constants/theme";
+import { getFavorites, toggleFavorite } from "../../utils/storage";
+import babsData from "../../data/babs.json";
 
 export default function FavoritesScreen() {
+  const router = useRouter();
+  const [favoriteIds, setFavoriteIds] = useState<number[]>([]);
+
+  useFocusEffect(
+    useCallback(() => {
+      getFavorites().then(setFavoriteIds);
+    }, [])
+  );
+
+  const favoriteBabs = babsData.babs.filter((b) =>
+    favoriteIds.includes(b.id)
+  );
+
+  async function handleRemove(babId: number) {
+    const next = await toggleFavorite(babId);
+    setFavoriteIds(next);
+  }
+
+  if (favoriteIds.length === 0) {
+    return (
+      <SafeAreaView style={styles.container}>
+        <View style={styles.header}>
+          <Text style={styles.title}>Favorites</Text>
+          <Text style={styles.subtitle}>Your saved babs</Text>
+        </View>
+        <View style={styles.emptyState}>
+          <Ionicons name="heart-outline" size={64} color={Colors.lightGold} />
+          <Text style={styles.emptyTitle}>No favorites yet</Text>
+          <Text style={styles.emptySubtitle}>
+            Tap the heart icon while reading a bab to save it here
+          </Text>
+        </View>
+      </SafeAreaView>
+    );
+  }
+
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
         <Text style={styles.title}>Favorites</Text>
-        <Text style={styles.subtitle}>Your saved babs</Text>
-      </View>
-
-      <View style={styles.emptyState}>
-        <Ionicons name="heart-outline" size={64} color={Colors.lightGold} />
-        <Text style={styles.emptyTitle}>No favorites yet</Text>
-        <Text style={styles.emptySubtitle}>
-          Tap the heart icon while reading a bab to save it here
+        <Text style={styles.subtitle}>
+          {favoriteIds.length} saved {favoriteIds.length === 1 ? "bab" : "babs"}
         </Text>
       </View>
+      <FlatList
+        data={favoriteBabs}
+        keyExtractor={(item) => String(item.id)}
+        contentContainerStyle={styles.list}
+        showsVerticalScrollIndicator={false}
+        renderItem={({ item }) => (
+          <Pressable
+            style={styles.babCard}
+            onPress={() => router.push(`/bab/${item.id}`)}
+          >
+            <View style={styles.babNumberBadge}>
+              <Text style={styles.babNumberText}>{item.id}</Text>
+            </View>
+            <View style={styles.babInfo}>
+              <Text style={styles.babTitle}>Bab {item.id}</Text>
+              <Text style={styles.babPreview} numberOfLines={1}>
+                {item.lines[0].translation.en}
+              </Text>
+            </View>
+            <View style={styles.cardActions}>
+              <Pressable
+                style={styles.removeBtn}
+                onPress={() => handleRemove(item.id)}
+                hitSlop={8}
+              >
+                <Ionicons name="heart" size={20} color={Colors.error} />
+              </Pressable>
+              <Ionicons
+                name="chevron-forward"
+                size={18}
+                color={Colors.textLight}
+              />
+            </View>
+          </Pressable>
+        )}
+      />
     </SafeAreaView>
   );
 }
@@ -42,6 +113,58 @@ const styles = StyleSheet.create({
     fontSize: Typography.sizes.sm,
     color: Colors.textSecondary,
     marginTop: Spacing.xs,
+  },
+  list: {
+    paddingHorizontal: Spacing.lg,
+    paddingBottom: Spacing.xxl,
+  },
+  babCard: {
+    backgroundColor: Colors.cardBg,
+    borderRadius: BorderRadius.lg,
+    padding: Spacing.md,
+    marginBottom: Spacing.sm,
+    borderWidth: 1,
+    borderColor: Colors.border,
+    flexDirection: "row",
+    alignItems: "center",
+    gap: Spacing.md,
+  },
+  babNumberBadge: {
+    width: 44,
+    height: 44,
+    borderRadius: BorderRadius.full,
+    backgroundColor: Colors.background,
+    borderWidth: 2,
+    borderColor: Colors.gold,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  babNumberText: {
+    fontSize: Typography.sizes.sm,
+    fontWeight: "700",
+    color: Colors.gold,
+  },
+  babInfo: {
+    flex: 1,
+  },
+  babTitle: {
+    fontSize: Typography.sizes.md,
+    fontWeight: "600",
+    color: Colors.text,
+  },
+  babPreview: {
+    fontSize: Typography.sizes.xs,
+    color: Colors.textSecondary,
+    marginTop: 2,
+    fontStyle: "italic",
+  },
+  cardActions: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: Spacing.sm,
+  },
+  removeBtn: {
+    padding: Spacing.xs,
   },
   emptyState: {
     flex: 1,

@@ -8,40 +8,66 @@ import {
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect, useCallback } from "react";
 import { Colors } from "../../constants/colors";
 import { Spacing, BorderRadius, Typography } from "../../constants/theme";
+import { useAppSettings } from "../../contexts/AppContext";
+import {
+  isFavorite,
+  toggleFavorite,
+  markBabRead,
+  setLastReadBab,
+} from "../../utils/storage";
 import babsData from "../../data/babs.json";
+
+const FONT_SCALE: Record<string, number> = {
+  small: 0.85,
+  medium: 1.0,
+  large: 1.2,
+};
 
 export default function BabScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
   const router = useRouter();
+  const { fontSize, language } = useAppSettings();
   const babId = parseInt(id || "1", 10);
-  const [isFavorite, setIsFavorite] = useState(false);
+  const scale = FONT_SCALE[fontSize] ?? 1;
+
+  const [fav, setFav] = useState(false);
 
   const bab = useMemo(
     () => babsData.babs.find((b) => b.id === babId),
     [babId]
   );
 
-  const hasContent = !!bab;
+  // Load favorite state & mark as read on open
+  useEffect(() => {
+    isFavorite(babId).then(setFav);
+    setLastReadBab(babId);
+    markBabRead(babId);
+  }, [babId]);
+
+  const handleFavorite = useCallback(async () => {
+    const next = await toggleFavorite(babId);
+    setFav(next.includes(babId));
+  }, [babId]);
+
+  const translation = (t: { en: string; tr: string }) =>
+    language === "tr" ? t.tr : t.en;
 
   return (
     <SafeAreaView style={styles.container}>
       {/* Header */}
       <View style={styles.header}>
-        <Pressable style={styles.backButton} onPress={() => router.back()}>
+        <Pressable style={styles.iconBtn} onPress={() => router.back()}>
           <Ionicons name="arrow-back" size={24} color={Colors.text} />
         </Pressable>
         <Text style={styles.headerTitle}>Bab {babId}</Text>
-        <Pressable
-          style={styles.favoriteButton}
-          onPress={() => setIsFavorite(!isFavorite)}
-        >
+        <Pressable style={styles.iconBtn} onPress={handleFavorite}>
           <Ionicons
-            name={isFavorite ? "heart" : "heart-outline"}
+            name={fav ? "heart" : "heart-outline"}
             size={24}
-            color={isFavorite ? Colors.error : Colors.text}
+            color={fav ? Colors.error : Colors.text}
           />
         </Pressable>
       </View>
@@ -50,42 +76,71 @@ export default function BabScreen() {
         contentContainerStyle={styles.content}
         showsVerticalScrollIndicator={false}
       >
-        {!hasContent ? (
+        {!bab ? (
           <View style={styles.comingSoon}>
             <Ionicons name="book-outline" size={48} color={Colors.lightGold} />
             <Text style={styles.comingSoonTitle}>Bab {babId}</Text>
-            <Text style={styles.comingSoonText}>
-              Content coming soon
-            </Text>
+            <Text style={styles.comingSoonText}>Content coming soon</Text>
           </View>
         ) : (
           <>
-            {/* Lines - each line shows Arabic, transliteration, translation */}
             {bab.lines.map((line, index) => (
               <View key={index} style={styles.lineCard}>
                 <View style={styles.lineNumber}>
                   <Text style={styles.lineNumberText}>{index + 1}</Text>
                 </View>
-                <Text style={styles.arabicText}>{line.arabic}</Text>
-                <Text style={styles.translitText}>
+                <Text
+                  style={[
+                    styles.arabicText,
+                    { fontSize: Typography.sizes.arabic * scale, lineHeight: Typography.sizes.arabic * scale * 1.8 },
+                  ]}
+                >
+                  {line.arabic}
+                </Text>
+                <Text
+                  style={[
+                    styles.translitText,
+                    { fontSize: Typography.sizes.sm * scale },
+                  ]}
+                >
                   {line.transliteration}
                 </Text>
-                <Text style={styles.translationText}>
-                  {line.translation.en}
+                <Text
+                  style={[
+                    styles.translationText,
+                    { fontSize: Typography.sizes.sm * scale },
+                  ]}
+                >
+                  {translation(line.translation)}
                 </Text>
               </View>
             ))}
 
             {/* Closing Dua */}
             <View style={styles.closingSection}>
-              <Text style={styles.closingArabic}>
+              <Text
+                style={[
+                  styles.closingArabic,
+                  { fontSize: Typography.sizes.xl * scale, lineHeight: Typography.sizes.xl * scale * 1.7 },
+                ]}
+              >
                 {bab.closing.arabic}
               </Text>
-              <Text style={styles.closingTranslit}>
+              <Text
+                style={[
+                  styles.closingTranslit,
+                  { fontSize: Typography.sizes.sm * scale },
+                ]}
+              >
                 {bab.closing.transliteration}
               </Text>
-              <Text style={styles.closingTranslation}>
-                {bab.closing.translation.en}
+              <Text
+                style={[
+                  styles.closingTranslation,
+                  { fontSize: Typography.sizes.sm * scale },
+                ]}
+              >
+                {translation(bab.closing.translation)}
               </Text>
             </View>
           </>
@@ -154,7 +209,7 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: Colors.border,
   },
-  backButton: {
+  iconBtn: {
     width: 40,
     height: 40,
     alignItems: "center",
@@ -164,12 +219,6 @@ const styles = StyleSheet.create({
     fontSize: Typography.sizes.lg,
     fontWeight: "700",
     color: Colors.text,
-  },
-  favoriteButton: {
-    width: 40,
-    height: 40,
-    alignItems: "center",
-    justifyContent: "center",
   },
   content: {
     padding: Spacing.lg,
@@ -215,22 +264,18 @@ const styles = StyleSheet.create({
     color: Colors.gold,
   },
   arabicText: {
-    fontSize: Typography.sizes.arabic,
     fontFamily: "NotoNaskhArabic",
     color: Colors.text,
     textAlign: "center",
-    lineHeight: 44,
     writingDirection: "rtl",
   },
   translitText: {
-    fontSize: Typography.sizes.sm,
     color: Colors.textSecondary,
     textAlign: "center",
     fontStyle: "italic",
     lineHeight: 22,
   },
   translationText: {
-    fontSize: Typography.sizes.sm,
     color: Colors.tealSage,
     textAlign: "center",
     lineHeight: 22,
@@ -244,22 +289,18 @@ const styles = StyleSheet.create({
     gap: Spacing.md,
   },
   closingArabic: {
-    fontSize: Typography.sizes.xl,
     fontFamily: "NotoNaskhArabic",
     color: Colors.text,
     textAlign: "center",
-    lineHeight: 38,
     writingDirection: "rtl",
   },
   closingTranslit: {
-    fontSize: Typography.sizes.sm,
     color: Colors.textSecondary,
     textAlign: "center",
     fontStyle: "italic",
     lineHeight: 22,
   },
   closingTranslation: {
-    fontSize: Typography.sizes.sm,
     color: Colors.textSecondary,
     textAlign: "center",
     lineHeight: 22,

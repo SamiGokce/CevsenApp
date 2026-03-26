@@ -3,9 +3,19 @@ import { Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import { useFonts } from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
+import * as Notifications from "expo-notifications";
 import { Colors } from "../constants/colors";
+import { AppProvider } from "../contexts/AppContext";
 
 SplashScreen.preventAutoHideAsync();
+
+Notifications.setNotificationHandler({
+  handleNotification: async () => ({
+    shouldShowAlert: true,
+    shouldPlaySound: true,
+    shouldSetBadge: false,
+  }),
+});
 
 export default function RootLayout() {
   const [fontsLoaded] = useFonts({
@@ -24,7 +34,7 @@ export default function RootLayout() {
   }
 
   return (
-    <>
+    <AppProvider>
       <StatusBar style="dark" />
       <Stack
         screenOptions={{
@@ -32,6 +42,6 @@ export default function RootLayout() {
           contentStyle: { backgroundColor: Colors.background },
         }}
       />
-    </>
+    </AppProvider>
   );
 }
