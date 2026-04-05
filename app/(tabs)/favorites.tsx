@@ -32,14 +32,14 @@ export default function FavoritesScreen() {
     return (
       <SafeAreaView style={styles.container}>
         <View style={styles.header}>
-          <Text style={styles.title}>Favorites</Text>
-          <Text style={styles.subtitle}>Your saved babs</Text>
+          <Text style={styles.title}>Favoriler</Text>
+          <Text style={styles.subtitle}>Kaydettiğin bablar</Text>
         </View>
         <View style={styles.emptyState}>
           <Ionicons name="heart-outline" size={64} color={Colors.lightGold} />
-          <Text style={styles.emptyTitle}>No favorites yet</Text>
+          <Text style={styles.emptyTitle}>Henüz favori yok</Text>
           <Text style={styles.emptySubtitle}>
-            Tap the heart icon while reading a bab to save it here
+            Bab okurken kalp ikonuna dokun, buraya kaydedilir
           </Text>
         </View>
       </SafeAreaView>
@@ -49,9 +49,9 @@ export default function FavoritesScreen() {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.title}>Favorites</Text>
+        <Text style={styles.title}>Favoriler</Text>
         <Text style={styles.subtitle}>
-          {favoriteIds.length} saved {favoriteIds.length === 1 ? "bab" : "babs"}
+          {favoriteIds.length} kayıtlı bab
         </Text>
       </View>
       <FlatList
@@ -70,7 +70,7 @@ export default function FavoritesScreen() {
             <View style={styles.babInfo}>
               <Text style={styles.babTitle}>Bab {item.id}</Text>
               <Text style={styles.babPreview} numberOfLines={1}>
-                {item.lines[0].translation.en}
+                {item.lines[0].translation.tr}
               </Text>
             </View>
             <View style={styles.cardActions}>
@@ -101,8 +101,8 @@ const styles = StyleSheet.create({
   },
   header: {
     paddingHorizontal: Spacing.lg,
-    paddingTop: Spacing.lg,
-    paddingBottom: Spacing.md,
+    paddingTop: Spacing.sm,
+    paddingBottom: 4,
   },
   title: {
     fontSize: Typography.sizes.xxl,
@@ -112,7 +112,7 @@ const styles = StyleSheet.create({
   subtitle: {
     fontSize: Typography.sizes.sm,
     color: Colors.textSecondary,
-    marginTop: Spacing.xs,
+    marginTop: 2,
   },
   list: {
     paddingHorizontal: Spacing.lg,
@@ -121,17 +121,17 @@ const styles = StyleSheet.create({
   babCard: {
     backgroundColor: Colors.cardBg,
     borderRadius: BorderRadius.lg,
-    padding: Spacing.md,
-    marginBottom: Spacing.sm,
+    padding: 10,
+    marginBottom: 4,
     borderWidth: 1,
     borderColor: Colors.border,
     flexDirection: "row",
     alignItems: "center",
-    gap: Spacing.md,
+    gap: Spacing.sm,
   },
   babNumberBadge: {
-    width: 44,
-    height: 44,
+    width: 36,
+    height: 36,
     borderRadius: BorderRadius.full,
     backgroundColor: Colors.background,
     borderWidth: 2,
@@ -140,7 +140,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   babNumberText: {
-    fontSize: Typography.sizes.sm,
+    fontSize: Typography.sizes.xs,
     fontWeight: "700",
     color: Colors.gold,
   },

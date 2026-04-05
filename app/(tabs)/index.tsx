@@ -41,27 +41,27 @@ export default function HomeScreen() {
         {/* Header */}
         <View style={styles.header}>
           <Text style={styles.greeting}>بِسْمِ اللّٰهِ</Text>
-          <Text style={styles.subtitle}>Welcome to Cevşen</Text>
+          <Text style={styles.subtitle}>Cevşen'e Hoş Geldiniz</Text>
         </View>
 
         {/* Streak / Completions Card */}
         <View style={styles.streakCard}>
           <View style={styles.streakItem}>
-            <Ionicons name="flame" size={28} color={Colors.gold} />
+            <Ionicons name="flame" size={24} color={Colors.gold} />
             <Text style={styles.streakCount}>{stats.streak}</Text>
-            <Text style={styles.streakLabel}>Day Streak</Text>
+            <Text style={styles.streakLabel}>Gün Serisi</Text>
           </View>
           <View style={styles.divider} />
           <View style={styles.streakItem}>
-            <Ionicons name="trophy" size={28} color={Colors.gold} />
+            <Ionicons name="trophy" size={24} color={Colors.gold} />
             <Text style={styles.streakCount}>{stats.completions}</Text>
-            <Text style={styles.streakLabel}>Completions</Text>
+            <Text style={styles.streakLabel}>Tamamlamalar</Text>
           </View>
           <View style={styles.divider} />
           <View style={styles.streakItem}>
-            <Ionicons name="book" size={28} color={Colors.tealSage} />
+            <Ionicons name="book" size={24} color={Colors.tealSage} />
             <Text style={styles.streakCount}>{stats.babsRead}/99</Text>
-            <Text style={styles.streakLabel}>Babs Read</Text>
+            <Text style={styles.streakLabel}>Okunan Bablar</Text>
           </View>
         </View>
 
@@ -69,7 +69,7 @@ export default function HomeScreen() {
         {stats.babsRead > 0 && (
           <View style={styles.progressBarCard}>
             <View style={styles.progressHeader}>
-              <Text style={styles.progressLabel}>Current cycle progress</Text>
+              <Text style={styles.progressLabel}>Mevcut döngü ilerlemesi</Text>
               <Text style={styles.progressPct}>{progressPct}%</Text>
             </View>
             <View style={styles.progressBarBg}>
@@ -89,10 +89,10 @@ export default function HomeScreen() {
           onPress={() => router.push(`/bab/${lastBab}`)}
         >
           <View style={styles.continueLeft}>
-            <Text style={styles.continueLabel}>Continue Reading</Text>
+            <Text style={styles.continueLabel}>Okumaya Devam Et</Text>
             <Text style={styles.continueTitle}>Bab {lastBab}</Text>
             <Text style={styles.continueSubtitle}>
-              {lastBab === 1 ? "Begin your journey" : `Pick up where you left off`}
+              {lastBab === 1 ? "Yolculuğuna başla" : "Kaldığın yerden devam et"}
             </Text>
           </View>
           <Ionicons
@@ -103,21 +103,21 @@ export default function HomeScreen() {
         </Pressable>
 
         {/* Quick Actions */}
-        <Text style={styles.sectionTitle}>Quick Actions</Text>
+        <Text style={styles.sectionTitle}>Hızlı Eylemler</Text>
         <View style={styles.actionsRow}>
           <Pressable
             style={styles.actionCard}
             onPress={() => router.push("/(tabs)/babs")}
           >
-            <Ionicons name="book-outline" size={28} color={Colors.tealSage} />
-            <Text style={styles.actionLabel}>All Babs</Text>
+            <Ionicons name="book-outline" size={24} color={Colors.tealSage} />
+            <Text style={styles.actionLabel}>Tüm Bablar</Text>
           </Pressable>
           <Pressable
             style={styles.actionCard}
             onPress={() => router.push("/(tabs)/favorites")}
           >
-            <Ionicons name="heart-outline" size={28} color={Colors.tealSage} />
-            <Text style={styles.actionLabel}>Favorites</Text>
+            <Ionicons name="heart-outline" size={24} color={Colors.tealSage} />
+            <Text style={styles.actionLabel}>Favoriler</Text>
           </Pressable>
           <Pressable
             style={styles.actionCard}
@@ -125,10 +125,10 @@ export default function HomeScreen() {
           >
             <Ionicons
               name="stats-chart-outline"
-              size={28}
+              size={24}
               color={Colors.tealSage}
             />
-            <Text style={styles.actionLabel}>Progress</Text>
+            <Text style={styles.actionLabel}>İlerleme</Text>
           </Pressable>
         </View>
       </ScrollView>
@@ -142,11 +142,11 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.background,
   },
   content: {
-    padding: Spacing.lg,
+    padding: Spacing.md,
     paddingBottom: Spacing.xxl,
   },
   header: {
-    marginBottom: Spacing.lg,
+    marginBottom: Spacing.sm,
   },
   greeting: {
     fontSize: Typography.sizes.xxl,
@@ -162,17 +162,17 @@ const styles = StyleSheet.create({
   streakCard: {
     backgroundColor: Colors.cardBg,
     borderRadius: BorderRadius.lg,
-    padding: Spacing.lg,
+    padding: Spacing.md,
     flexDirection: "row",
     alignItems: "center",
-    marginBottom: Spacing.md,
+    marginBottom: Spacing.sm,
     borderWidth: 1,
     borderColor: Colors.border,
   },
   streakItem: {
     flex: 1,
     alignItems: "center",
-    gap: 4,
+    gap: 2,
   },
   streakCount: {
     fontSize: Typography.sizes.lg,
@@ -186,22 +186,22 @@ const styles = StyleSheet.create({
   },
   divider: {
     width: 1,
-    height: 48,
+    height: 40,
     backgroundColor: Colors.border,
     marginHorizontal: Spacing.xs,
   },
   progressBarCard: {
     backgroundColor: Colors.cardBg,
     borderRadius: BorderRadius.lg,
-    padding: Spacing.md,
-    marginBottom: Spacing.md,
+    padding: Spacing.sm,
+    marginBottom: Spacing.sm,
     borderWidth: 1,
     borderColor: Colors.border,
   },
   progressHeader: {
     flexDirection: "row",
     justifyContent: "space-between",
-    marginBottom: Spacing.sm,
+    marginBottom: Spacing.xs,
   },
   progressLabel: {
     fontSize: Typography.sizes.xs,
@@ -226,11 +226,11 @@ const styles = StyleSheet.create({
   continueCard: {
     backgroundColor: Colors.cardBg,
     borderRadius: BorderRadius.lg,
-    padding: Spacing.lg,
+    padding: Spacing.md,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    marginBottom: Spacing.lg,
+    marginBottom: Spacing.md,
     borderWidth: 1,
     borderColor: Colors.border,
   },
@@ -256,26 +256,26 @@ const styles = StyleSheet.create({
     marginTop: 2,
   },
   sectionTitle: {
-    fontSize: Typography.sizes.lg,
+    fontSize: Typography.sizes.md,
     fontWeight: "700",
     color: Colors.text,
-    marginBottom: Spacing.md,
+    marginBottom: Spacing.sm,
   },
   actionsRow: {
     flexDirection: "row",
-    gap: Spacing.md,
+    gap: Spacing.sm,
   },
   actionCard: {
     flex: 1,
     backgroundColor: Colors.cardBg,
     borderRadius: BorderRadius.md,
-    padding: Spacing.md,
+    padding: Spacing.sm,
     alignItems: "center",
     justifyContent: "center",
-    gap: Spacing.sm,
+    gap: Spacing.xs,
     borderWidth: 1,
     borderColor: Colors.border,
-    minHeight: 90,
+    minHeight: 76,
   },
   actionLabel: {
     fontSize: Typography.sizes.xs,

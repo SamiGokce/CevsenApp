@@ -43,27 +43,27 @@ export default function BabsScreen() {
       <View style={styles.babInfo}>
         <Text style={styles.babTitle}>{item.title}</Text>
       </View>
-      <Ionicons name="chevron-forward" size={20} color={Colors.textLight} />
+      <Ionicons name="chevron-forward" size={18} color={Colors.textLight} />
     </Pressable>
   );
 
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.title}>Babs</Text>
-        <Text style={styles.subtitle}>99 sections of Cevşen-ül Kebir</Text>
+        <Text style={styles.title}>Bablar</Text>
+        <Text style={styles.subtitle}>Cevşen-ül Kebir'in 99 bölümü</Text>
       </View>
 
       <View style={styles.searchContainer}>
         <Ionicons
           name="search"
-          size={18}
+          size={16}
           color={Colors.textLight}
           style={styles.searchIcon}
         />
         <TextInput
           style={styles.searchInput}
-          placeholder="Search babs..."
+          placeholder="Bab ara..."
           placeholderTextColor={Colors.textLight}
           value={search}
           onChangeText={setSearch}
@@ -88,8 +88,8 @@ const styles = StyleSheet.create({
   },
   header: {
     paddingHorizontal: Spacing.lg,
-    paddingTop: Spacing.lg,
-    paddingBottom: Spacing.sm,
+    paddingTop: Spacing.sm,
+    paddingBottom: 4,
   },
   title: {
     fontSize: Typography.sizes.xxl,
@@ -99,14 +99,14 @@ const styles = StyleSheet.create({
   subtitle: {
     fontSize: Typography.sizes.sm,
     color: Colors.textSecondary,
-    marginTop: Spacing.xs,
+    marginTop: 2,
   },
   searchContainer: {
     flexDirection: "row",
     alignItems: "center",
     backgroundColor: Colors.cardBg,
     marginHorizontal: Spacing.lg,
-    marginVertical: Spacing.md,
+    marginVertical: Spacing.sm,
     borderRadius: BorderRadius.md,
     borderWidth: 1,
     borderColor: Colors.border,
@@ -117,7 +117,7 @@ const styles = StyleSheet.create({
   },
   searchInput: {
     flex: 1,
-    paddingVertical: Spacing.md,
+    paddingVertical: Spacing.sm,
     fontSize: Typography.sizes.md,
     color: Colors.text,
   },
@@ -130,22 +130,22 @@ const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: Colors.cardBg,
     borderRadius: BorderRadius.md,
-    padding: Spacing.md,
-    marginBottom: Spacing.sm,
+    padding: 10,
+    marginBottom: 4,
     borderWidth: 1,
     borderColor: Colors.border,
   },
   babNumber: {
-    width: 44,
-    height: 44,
+    width: 36,
+    height: 36,
     borderRadius: BorderRadius.full,
     backgroundColor: Colors.background,
     alignItems: "center",
     justifyContent: "center",
-    marginRight: Spacing.md,
+    marginRight: Spacing.sm,
   },
   babNumberText: {
-    fontSize: Typography.sizes.md,
+    fontSize: Typography.sizes.sm,
     fontWeight: "700",
     color: Colors.gold,
   },

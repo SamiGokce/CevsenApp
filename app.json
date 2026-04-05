@@ -3,7 +3,7 @@
     "name": "Cevşen",
     "slug": "cevsen",
     "version": "1.0.0",
-    "orientation": "portrait",
+    "orientation": "default",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "scheme": "cevsen",

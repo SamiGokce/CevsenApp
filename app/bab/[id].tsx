@@ -4,6 +4,7 @@ import {
   StyleSheet,
   ScrollView,
   Pressable,
+  useWindowDimensions,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useLocalSearchParams, useRouter } from "expo-router";
@@ -29,7 +30,9 @@ const FONT_SCALE: Record<string, number> = {
 export default function BabScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
   const router = useRouter();
-  const { fontSize, language } = useAppSettings();
+  const { fontSize, language, showTranslation } = useAppSettings();
+  const { width, height } = useWindowDimensions();
+  const isLandscape = width > height;
   const babId = parseInt(id || "1", 10);
   const scale = FONT_SCALE[fontSize] ?? 1;
 
@@ -73,19 +76,28 @@ export default function BabScreen() {
       </View>
 
       <ScrollView
-        contentContainerStyle={styles.content}
+        contentContainerStyle={[
+          styles.content,
+          isLandscape && styles.contentLandscape,
+        ]}
         showsVerticalScrollIndicator={false}
       >
         {!bab ? (
           <View style={styles.comingSoon}>
             <Ionicons name="book-outline" size={48} color={Colors.lightGold} />
             <Text style={styles.comingSoonTitle}>Bab {babId}</Text>
-            <Text style={styles.comingSoonText}>Content coming soon</Text>
+            <Text style={styles.comingSoonText}>İçerik yakında eklenecek</Text>
           </View>
         ) : (
           <>
             {bab.lines.map((line, index) => (
-              <View key={index} style={styles.lineCard}>
+              <View
+                key={index}
+                style={[
+                  styles.lineCard,
+                  isLandscape && styles.lineCardLandscape,
+                ]}
+              >
                 <View style={styles.lineNumber}>
                   <Text style={styles.lineNumberText}>{index + 1}</Text>
                 </View>
@@ -97,22 +109,16 @@ export default function BabScreen() {
                 >
                   {line.arabic}
                 </Text>
-                <Text
-                  style={[
-                    styles.translitText,
-                    { fontSize: Typography.sizes.sm * scale },
-                  ]}
-                >
-                  {line.transliteration}
-                </Text>
-                <Text
-                  style={[
-                    styles.translationText,
-                    { fontSize: Typography.sizes.sm * scale },
-                  ]}
-                >
-                  {translation(line.translation)}
-                </Text>
+                {showTranslation && (
+                  <Text
+                    style={[
+                      styles.translationText,
+                      { fontSize: Typography.sizes.sm * scale },
+                    ]}
+                  >
+                    {translation(line.translation)}
+                  </Text>
+                )}
               </View>
             ))}
 
@@ -126,22 +132,16 @@ export default function BabScreen() {
               >
                 {bab.closing.arabic}
               </Text>
-              <Text
-                style={[
-                  styles.closingTranslit,
-                  { fontSize: Typography.sizes.sm * scale },
-                ]}
-              >
-                {bab.closing.transliteration}
-              </Text>
-              <Text
-                style={[
-                  styles.closingTranslation,
-                  { fontSize: Typography.sizes.sm * scale },
-                ]}
-              >
-                {translation(bab.closing.translation)}
-              </Text>
+              {showTranslation && (
+                <Text
+                  style={[
+                    styles.closingTranslation,
+                    { fontSize: Typography.sizes.sm * scale },
+                  ]}
+                >
+                  {translation(bab.closing.translation)}
+                </Text>
+              )}
             </View>
           </>
         )}
@@ -165,7 +165,7 @@ export default function BabScreen() {
               babId <= 1 && styles.navButtonTextDisabled,
             ]}
           >
-            Previous
+            Önceki
           </Text>
         </Pressable>
 
@@ -182,7 +182,7 @@ export default function BabScreen() {
               babId >= 99 && styles.navButtonTextDisabled,
             ]}
           >
-            Next
+            Sonraki
           </Text>
           <Ionicons
             name="arrow-forward"
@@ -224,6 +224,11 @@ const styles = StyleSheet.create({
     padding: Spacing.lg,
     paddingBottom: Spacing.xxl,
   },
+  contentLandscape: {
+    maxWidth: 600,
+    alignSelf: "center",
+    width: "100%",
+  },
   comingSoon: {
     alignItems: "center",
     justifyContent: "center",
@@ -249,6 +254,10 @@ const styles = StyleSheet.create({
     alignItems: "center",
     gap: Spacing.sm,
   },
+  lineCardLandscape: {
+    padding: Spacing.sm,
+    marginBottom: Spacing.xs,
+  },
   lineNumber: {
     width: 28,
     height: 28,
@@ -269,12 +278,6 @@ const styles = StyleSheet.create({
     textAlign: "center",
     writingDirection: "rtl",
   },
-  translitText: {
-    color: Colors.textSecondary,
-    textAlign: "center",
-    fontStyle: "italic",
-    lineHeight: 22,
-  },
   translationText: {
     color: Colors.tealSage,
     textAlign: "center",
@@ -293,12 +296,6 @@ const styles = StyleSheet.create({
     color: Colors.text,
     textAlign: "center",
     writingDirection: "rtl",
-  },
-  closingTranslit: {
-    color: Colors.textSecondary,
-    textAlign: "center",
-    fontStyle: "italic",
-    lineHeight: 22,
   },
   closingTranslation: {
     color: Colors.textSecondary,

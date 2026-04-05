@@ -29,8 +29,8 @@ async function scheduleDaily(): Promise<boolean> {
   await Notifications.cancelAllScheduledNotificationsAsync();
   await Notifications.scheduleNotificationAsync({
     content: {
-      title: "Time to read Cevşen",
-      body: "Continue your daily dhikr — keep your streak alive.",
+      title: "Cevşen okuma zamanı",
+      body: "Günlük zikrinize devam edin — serinizi canlı tutun.",
     },
     trigger: {
       type: Notifications.SchedulableTriggerInputTypes.DAILY,
@@ -86,7 +86,7 @@ function Row({ icon, title, subtitle, onPress, right, last }: RowProps) {
 }
 
 export default function SettingsScreen() {
-  const { fontSize, language, setFontSize, setLanguage } = useAppSettings();
+  const { fontSize, language, showTranslation, setFontSize, setLanguage, setShowTranslation } = useAppSettings();
   const [notifEnabled, setNotifEnabled] = useState(false);
   const [aboutVisible, setAboutVisible] = useState(false);
 
@@ -101,9 +101,9 @@ export default function SettingsScreen() {
       const ok = await scheduleDaily();
       if (!ok) {
         Alert.alert(
-          "Permission Required",
-          "Please enable notifications for Cevşen in your device settings.",
-          [{ text: "OK" }]
+          "İzin Gerekli",
+          "Cevşen için cihaz ayarlarından bildirimlere izin verin.",
+          [{ text: "Tamam" }]
         );
         return;
       }
@@ -116,52 +116,52 @@ export default function SettingsScreen() {
 
   function showFontSizePicker() {
     const options: { text: string; size: FontSize }[] = [
-      { text: "Small", size: "small" },
-      { text: "Medium", size: "medium" },
-      { text: "Large", size: "large" },
+      { text: "Küçük", size: "small" },
+      { text: "Orta", size: "medium" },
+      { text: "Büyük", size: "large" },
     ];
     Alert.alert(
-      "Font Size",
-      `Current: ${fontSize.charAt(0).toUpperCase() + fontSize.slice(1)}`,
+      "Yazı Boyutu",
+      `Mevcut: ${fontSizeLabel}`,
       [
         ...options.map((o) => ({
           text: o.text + (fontSize === o.size ? " ✓" : ""),
           onPress: () => setFontSize(o.size),
         })),
-        { text: "Cancel", style: "cancel" as const },
+        { text: "İptal", style: "cancel" as const },
       ]
     );
   }
 
   function showLanguagePicker() {
     const options: { text: string; lang: Language }[] = [
-      { text: "English", lang: "en" },
       { text: "Türkçe", lang: "tr" },
+      { text: "English", lang: "en" },
     ];
     Alert.alert(
-      "Translation Language",
-      `Current: ${language === "en" ? "English" : "Türkçe"}`,
+      "Çeviri Dili",
+      `Mevcut: ${languageLabel}`,
       [
         ...options.map((o) => ({
           text: o.text + (language === o.lang ? " ✓" : ""),
           onPress: () => setLanguage(o.lang),
         })),
-        { text: "Cancel", style: "cancel" as const },
+        { text: "İptal", style: "cancel" as const },
       ]
     );
   }
 
   function handleSignIn() {
     Alert.alert(
-      "Sign In",
-      "Cloud sync with Google & Apple Sign-In is coming in the next update. Your progress is saved locally in the meantime.",
-      [{ text: "Got it" }]
+      "Giriş Yap",
+      "Google ve Apple ile bulut senkronizasyonu bir sonraki güncellemede geliyor. İlerlemeniz şu an cihazınızda kaydediliyor.",
+      [{ text: "Anladım" }]
     );
   }
 
   const fontSizeLabel =
-    fontSize.charAt(0).toUpperCase() + fontSize.slice(1);
-  const languageLabel = language === "en" ? "English" : "Türkçe";
+    fontSize === "small" ? "Küçük" : fontSize === "large" ? "Büyük" : "Orta";
+  const languageLabel = language === "tr" ? "Türkçe" : "English";
 
   return (
     <SafeAreaView style={styles.container}>
@@ -169,45 +169,61 @@ export default function SettingsScreen() {
         contentContainerStyle={styles.content}
         showsVerticalScrollIndicator={false}
       >
-        <Text style={styles.title}>Settings</Text>
+        <Text style={styles.title}>Ayarlar</Text>
 
-        {/* Account */}
-        <SectionHeader title="Account" />
+        {/* Hesap */}
+        <SectionHeader title="Hesap" />
         <View style={styles.section}>
           <Row
             icon="person-outline"
-            title="Sign In"
-            subtitle="Sync your progress across devices"
+            title="Giriş Yap"
+            subtitle="İlerlemenizi cihazlar arasında senkronize edin"
             onPress={handleSignIn}
             last
           />
         </View>
 
-        {/* Reading */}
-        <SectionHeader title="Reading" />
+        {/* Okuma */}
+        <SectionHeader title="Okuma" />
         <View style={styles.section}>
           <Row
             icon="text-outline"
-            title="Font Size"
+            title="Yazı Boyutu"
             subtitle={fontSizeLabel}
             onPress={showFontSizePicker}
           />
           <Row
+            icon="eye-outline"
+            title="Çeviriyi Göster"
+            subtitle={showTranslation ? "Açık" : "Kapalı"}
+            right={
+              <Switch
+                value={showTranslation}
+                onValueChange={setShowTranslation}
+                trackColor={{
+                  false: Colors.border,
+                  true: Colors.tealSage,
+                }}
+                thumbColor={Colors.white}
+              />
+            }
+          />
+          <Row
             icon="language-outline"
-            title="Translation Language"
+            title="Çeviri Dili"
             subtitle={languageLabel}
             onPress={showLanguagePicker}
             last
           />
         </View>
 
-        {/* Notifications */}
-        <SectionHeader title="Notifications" />
+        {/* Bildirimler */}
+        <SectionHeader title="Bildirimler" />
         <View style={styles.section}>
           <Row
             icon="notifications-outline"
-            title="Daily Reminder"
-            subtitle="Every day at 8:00 AM"
+            title="Günlük Hatırlatıcı"
+            subtitle="Her gün saat 08:00'de"
             last
             right={
               <Switch
@@ -223,20 +239,20 @@ export default function SettingsScreen() {
           />
         </View>
 
-        {/* About */}
-        <SectionHeader title="About" />
+        {/* Hakkında */}
+        <SectionHeader title="Hakkında" />
         <View style={styles.section}>
           <Row
             icon="information-circle-outline"
-            title="About Cevşen"
-            subtitle="Version 1.0.0"
+            title="Cevşen Hakkında"
+            subtitle="Sürüm 1.0.0"
             onPress={() => setAboutVisible(true)}
             last
           />
         </View>
       </ScrollView>
 
-      {/* About Modal — only mount when visible to avoid invisible overlay blocking taps */}
+      {/* About Modal */}
       {aboutVisible && (
       <Modal
         visible={aboutVisible}
@@ -246,7 +262,7 @@ export default function SettingsScreen() {
       >
         <SafeAreaView style={styles.modalContainer}>
           <View style={styles.modalHeader}>
-            <Text style={styles.modalTitle}>About Cevşen</Text>
+            <Text style={styles.modalTitle}>Cevşen Hakkında</Text>
             <Pressable
               onPress={() => setAboutVisible(false)}
               style={styles.modalClose}
@@ -259,20 +275,19 @@ export default function SettingsScreen() {
               <Ionicons name="book" size={48} color={Colors.gold} />
             </View>
             <Text style={styles.aboutName}>Cevşen-ül Kebir</Text>
-            <Text style={styles.aboutVersion}>Version 1.0.0</Text>
+            <Text style={styles.aboutVersion}>Sürüm 1.0.0</Text>
             <Text style={styles.aboutDesc}>
-              Cevşen-ül Kebir is a famous Islamic prayer attributed to the
-              Prophet Muhammad ﷺ, consisting of 99 sections (babs), each
-              containing 10 invocations of Allah's names and attributes.
+              Cevşen-ül Kebir, Hz. Peygamber ﷺ'e atfedilen ve her biri Allah'ın
+              isim ve sıfatlarına dair 10 dua içeren 99 bölümden (bab) oluşan
+              ünlü bir İslami duadır.
             </Text>
             <Text style={styles.aboutDesc}>
-              This app provides the full Arabic text with transliteration and
-              translations in English and Turkish, allowing you to read and
-              study this sacred prayer at your own pace.
+              Bu uygulama, kutsal duanın tamamını Arapça metin ve Türkçe çeviriyle
+              sunarak kendi hızınızda okumanıza ve çalışmanıza imkân tanır.
             </Text>
             <View style={styles.aboutDivider} />
-            <Text style={styles.aboutMeta}>Source: Süreyya Yayınları 2025</Text>
-            <Text style={styles.aboutMeta}>Free • No ads • No tracking</Text>
+            <Text style={styles.aboutMeta}>Kaynak: Süreyya Yayınları 2025</Text>
+            <Text style={styles.aboutMeta}>Ücretsiz • Reklamsız • Takip yok</Text>
           </ScrollView>
         </SafeAreaView>
       </Modal>

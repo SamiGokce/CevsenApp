@@ -19,7 +19,7 @@ function buildHeatmapDays(): { date: string; label: string }[] {
   const cur = new Date(startDate);
   while (cur <= today) {
     const iso = cur.toISOString().slice(0, 10);
-    const label = cur.toLocaleDateString("en-US", {
+    const label = cur.toLocaleDateString("tr-TR", {
       month: "short",
       day: "numeric",
     });
@@ -67,7 +67,7 @@ export default function ProgressScreen() {
     const firstDay = week[0];
     if (firstDay) {
       const month = new Date(firstDay.date + "T12:00:00").toLocaleDateString(
-        "en-US",
+        "tr-TR",
         { month: "short" }
       );
       if (month !== lastMonth) {
@@ -86,8 +86,8 @@ export default function ProgressScreen() {
         showsVerticalScrollIndicator={false}
       >
         <View style={styles.header}>
-          <Text style={styles.title}>Progress</Text>
-          <Text style={styles.subtitle}>Your reading journey</Text>
+          <Text style={styles.title}>İlerleme</Text>
+          <Text style={styles.subtitle}>Okuma yolculuğun</Text>
         </View>
 
         {/* Stats Cards */}
@@ -95,12 +95,12 @@ export default function ProgressScreen() {
           <View style={styles.statCard}>
             <Ionicons name="flame" size={28} color={Colors.gold} />
             <Text style={styles.statValue}>{stats.streak}</Text>
-            <Text style={styles.statLabel}>Day Streak</Text>
+            <Text style={styles.statLabel}>Gün Serisi</Text>
           </View>
           <View style={styles.statCard}>
             <Ionicons name="trophy" size={28} color={Colors.gold} />
             <Text style={styles.statValue}>{stats.longestStreak}</Text>
-            <Text style={styles.statLabel}>Longest</Text>
+            <Text style={styles.statLabel}>En Uzun</Text>
           </View>
           <View style={styles.statCard}>
             <Ionicons
@@ -109,16 +109,16 @@ export default function ProgressScreen() {
               color={Colors.tealSage}
             />
             <Text style={styles.statValue}>{stats.completions}</Text>
-            <Text style={styles.statLabel}>Completions</Text>
+            <Text style={styles.statLabel}>Tamamlamalar</Text>
           </View>
         </View>
 
         {/* Progress Bar */}
-        <Text style={styles.sectionTitle}>Current Progress</Text>
+        <Text style={styles.sectionTitle}>Mevcut İlerleme</Text>
         <View style={styles.progressCard}>
           <View style={styles.progressHeader}>
             <Text style={styles.progressLabel}>
-              {stats.babsRead} of 99 babs read
+              99 babdan {stats.babsRead}'i okundu
             </Text>
             <Text style={styles.progressPct}>{progressPct}%</Text>
           </View>
@@ -133,7 +133,7 @@ export default function ProgressScreen() {
         </View>
 
         {/* Heatmap */}
-        <Text style={styles.sectionTitle}>Reading Activity</Text>
+        <Text style={styles.sectionTitle}>Okuma Aktivitesi</Text>
         <View style={styles.heatmapCard}>
           {/* Month row */}
           <View style={styles.monthRow}>
@@ -170,7 +170,7 @@ export default function ProgressScreen() {
             </View>
           </ScrollView>
           <View style={styles.legendRow}>
-            <Text style={styles.legendText}>Less</Text>
+            <Text style={styles.legendText}>Az</Text>
             {[0, 1, 3, 6, 9].map((n) => (
               <View
                 key={n}
@@ -180,7 +180,7 @@ export default function ProgressScreen() {
                 ]}
               />
             ))}
-            <Text style={styles.legendText}>More</Text>
+            <Text style={styles.legendText}>Çok</Text>
           </View>
         </View>
       </ScrollView>
