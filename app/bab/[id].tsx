@@ -62,7 +62,16 @@ export default function BabScreen() {
     <SafeAreaView style={styles.container}>
       {/* Header */}
       <View style={styles.header}>
-        <Pressable style={styles.iconBtn} onPress={() => router.back()}>
+        <Pressable
+          style={styles.iconBtn}
+          onPress={() => {
+            if (router.canGoBack()) {
+              router.back();
+            } else {
+              router.replace("/(tabs)/babs");
+            }
+          }}
+        >
           <Ionicons name="arrow-back" size={24} color={Colors.text} />
         </Pressable>
         <Text style={styles.headerTitle}>Bab {babId}</Text>
