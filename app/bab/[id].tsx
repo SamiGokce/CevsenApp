@@ -322,11 +322,11 @@ const styles = StyleSheet.create({
     marginBottom: 3,
   },
   lineBook: {
-    paddingVertical: Spacing.sm,
+    paddingVertical: 2,
     paddingHorizontal: Spacing.xs,
-    marginBottom: Spacing.sm,
+    marginBottom: 2,
     alignItems: "center",
-    gap: 6,
+    gap: 4,
   },
   lineNumber: {
     position: "absolute",
