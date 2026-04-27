@@ -143,21 +143,19 @@ export default function BabScreen() {
                   easyReadMode && isLandscape && styles.lineCardLandscape,
                 ]}
               >
-                <View
-                  style={
-                    easyReadMode ? styles.lineNumber : styles.lineNumberBook
-                  }
-                >
-                  <Text
-                    style={
-                      easyReadMode
-                        ? styles.lineNumberText
-                        : styles.lineNumberTextBook
-                    }
-                  >
-                    {index + 1}
-                  </Text>
-                </View>
+                {easyReadMode ? (
+                  <View style={styles.lineNumber}>
+                    <Text style={styles.lineNumberText}>{index + 1}</Text>
+                  </View>
+                ) : (
+                  <View style={styles.lineNumberBookWrap}>
+                    <View style={styles.lineNumberBook}>
+                      <Text style={styles.lineNumberTextBook}>
+                        {index + 1}
+                      </Text>
+                    </View>
+                  </View>
+                )}
                 <Text
                   style={[
                     styles.arabicText,
@@ -344,17 +342,27 @@ const styles = StyleSheet.create({
     fontWeight: "700",
     color: Colors.gold,
   },
-  lineNumberBook: {
+  lineNumberBookWrap: {
     position: "absolute",
-    top: 6,
-    left: 0,
+    top: 0,
+    bottom: 0,
+    left: 4,
+    justifyContent: "center",
+  },
+  lineNumberBook: {
+    width: 22,
+    height: 22,
+    borderRadius: BorderRadius.full,
+    backgroundColor: Colors.cardBg,
+    borderWidth: 1,
+    borderColor: Colors.border,
     alignItems: "center",
     justifyContent: "center",
   },
   lineNumberTextBook: {
-    fontSize: Typography.sizes.xs,
-    fontWeight: "600",
-    color: Colors.textLight,
+    fontSize: 11,
+    fontWeight: "700",
+    color: Colors.gold,
   },
   arabicText: {
     fontFamily: "NotoNaskhArabic",
