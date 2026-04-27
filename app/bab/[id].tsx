@@ -5,11 +5,12 @@ import {
   ScrollView,
   Pressable,
   useWindowDimensions,
+  Platform,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
-import { useState, useMemo, useEffect, useCallback } from "react";
+import { useState, useMemo, useEffect, useCallback, useRef } from "react";
 import { Colors } from "../../constants/colors";
 import { Spacing, BorderRadius, Typography } from "../../constants/theme";
 import { useAppSettings } from "../../contexts/AppContext";
@@ -37,6 +38,7 @@ export default function BabScreen() {
   const scale = FONT_SCALE[fontSize] ?? 1;
 
   const [fav, setFav] = useState(false);
+  const scrollRef = useRef<ScrollView>(null);
 
   const bab = useMemo(
     () => babsData.babs.find((b) => b.id === babId),
@@ -54,6 +56,39 @@ export default function BabScreen() {
     const next = await toggleFavorite(babId);
     setFav(next.includes(babId));
   }, [babId]);
+
+  // Keyboard navigation (web only): ←/→ switch babs, ↑/↓ smooth-scroll
+  useEffect(() => {
+    if (Platform.OS !== "web") return;
+    const onKey = (e: KeyboardEvent) => {
+      const target = e.target as HTMLElement | null;
+      const tag = target?.tagName;
+      if (tag === "INPUT" || tag === "TEXTAREA" || target?.isContentEditable) {
+        return;
+      }
+      if (e.metaKey || e.ctrlKey || e.altKey) return;
+
+      if (e.key === "ArrowLeft" && babId > 1) {
+        e.preventDefault();
+        router.replace(`/bab/${babId - 1}`);
+      } else if (e.key === "ArrowRight" && babId < 99) {
+        e.preventDefault();
+        router.replace(`/bab/${babId + 1}`);
+      } else if (e.key === "ArrowUp" || e.key === "ArrowDown") {
+        const node = scrollRef.current as unknown as HTMLElement | null;
+        if (node && typeof (node as any).scrollBy === "function") {
+          e.preventDefault();
+          const delta = Math.max(120, Math.round(height * 0.3));
+          (node as any).scrollBy({
+            top: e.key === "ArrowDown" ? delta : -delta,
+            behavior: "smooth",
+          });
+        }
+      }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [babId, router, height]);
 
   const translation = (t: { en: string; tr: string }) =>
     language === "tr" ? t.tr : t.en;
@@ -85,6 +120,7 @@ export default function BabScreen() {
       </View>
 
       <ScrollView
+        ref={scrollRef}
         contentContainerStyle={[
           styles.content,
           isLandscape && styles.contentLandscape,
