@@ -98,6 +98,7 @@ export default function SettingsScreen() {
   } = useAppSettings();
   const [notifEnabled, setNotifEnabled] = useState(false);
   const [aboutVisible, setAboutVisible] = useState(false);
+  const [picker, setPicker] = useState<"font" | "lang" | null>(null);
 
   useFocusEffect(
     useCallback(() => {
@@ -123,42 +124,15 @@ export default function SettingsScreen() {
     saveNotificationEnabled(val);
   }
 
-  function showFontSizePicker() {
-    const options: { text: string; size: FontSize }[] = [
-      { text: "Küçük", size: "small" },
-      { text: "Orta", size: "medium" },
-      { text: "Büyük", size: "large" },
-    ];
-    Alert.alert(
-      "Yazı Boyutu",
-      `Mevcut: ${fontSizeLabel}`,
-      [
-        ...options.map((o) => ({
-          text: o.text + (fontSize === o.size ? " ✓" : ""),
-          onPress: () => setFontSize(o.size),
-        })),
-        { text: "İptal", style: "cancel" as const },
-      ]
-    );
-  }
-
-  function showLanguagePicker() {
-    const options: { text: string; lang: Language }[] = [
-      { text: "Türkçe", lang: "tr" },
-      { text: "English", lang: "en" },
-    ];
-    Alert.alert(
-      "Çeviri Dili",
-      `Mevcut: ${languageLabel}`,
-      [
-        ...options.map((o) => ({
-          text: o.text + (language === o.lang ? " ✓" : ""),
-          onPress: () => setLanguage(o.lang),
-        })),
-        { text: "İptal", style: "cancel" as const },
-      ]
-    );
-  }
+  const fontOptions: { text: string; size: FontSize }[] = [
+    { text: "Küçük", size: "small" },
+    { text: "Orta", size: "medium" },
+    { text: "Büyük", size: "large" },
+  ];
+  const langOptions: { text: string; lang: Language }[] = [
+    { text: "Türkçe", lang: "tr" },
+    { text: "English", lang: "en" },
+  ];
 
   function handleSignIn() {
     Alert.alert(
@@ -199,7 +173,7 @@ export default function SettingsScreen() {
             icon="text-outline"
             title="Yazı Boyutu"
             subtitle={fontSizeLabel}
-            onPress={showFontSizePicker}
+            onPress={() => setPicker("font")}
           />
           <Row
             icon="eye-outline"
@@ -241,7 +215,7 @@ export default function SettingsScreen() {
             icon="language-outline"
             title="Çeviri Dili"
             subtitle={languageLabel}
-            onPress={showLanguagePicker}
+            onPress={() => setPicker("lang")}
             last
           />
         </View>
@@ -280,6 +254,94 @@ export default function SettingsScreen() {
           />
         </View>
       </ScrollView>
+
+      {/* Picker Modal */}
+      {picker !== null && (
+        <Modal
+          visible
+          transparent
+          animationType="fade"
+          onRequestClose={() => setPicker(null)}
+        >
+          <Pressable
+            style={styles.pickerBackdrop}
+            onPress={() => setPicker(null)}
+          >
+            <Pressable style={styles.pickerSheet} onPress={() => {}}>
+              <Text style={styles.pickerTitle}>
+                {picker === "font" ? "Yazı Boyutu" : "Çeviri Dili"}
+              </Text>
+              {picker === "font"
+                ? fontOptions.map((o, i) => {
+                    const selected = fontSize === o.size;
+                    return (
+                      <Pressable
+                        key={o.size}
+                        style={[
+                          styles.pickerOption,
+                          i === fontOptions.length - 1 &&
+                            styles.pickerOptionLast,
+                        ]}
+                        onPress={() => {
+                          setFontSize(o.size);
+                          setPicker(null);
+                        }}
+                      >
+                        <Text
+                          style={[
+                            styles.pickerOptionText,
+                            selected && styles.pickerOptionTextSelected,
+                          ]}
+                        >
+                          {o.text}
+                        </Text>
+                        {selected && (
+                          <Ionicons
+                            name="checkmark"
+                            size={20}
+                            color={Colors.tealSage}
+                          />
+                        )}
+                      </Pressable>
+                    );
+                  })
+                : langOptions.map((o, i) => {
+                    const selected = language === o.lang;
+                    return (
+                      <Pressable
+                        key={o.lang}
+                        style={[
+                          styles.pickerOption,
+                          i === langOptions.length - 1 &&
+                            styles.pickerOptionLast,
+                        ]}
+                        onPress={() => {
+                          setLanguage(o.lang);
+                          setPicker(null);
+                        }}
+                      >
+                        <Text
+                          style={[
+                            styles.pickerOptionText,
+                            selected && styles.pickerOptionTextSelected,
+                          ]}
+                        >
+                          {o.text}
+                        </Text>
+                        {selected && (
+                          <Ionicons
+                            name="checkmark"
+                            size={20}
+                            color={Colors.tealSage}
+                          />
+                        )}
+                      </Pressable>
+                    );
+                  })}
+            </Pressable>
+          </Pressable>
+        </Modal>
+      )}
 
       {/* About Modal */}
       {aboutVisible && (
@@ -388,6 +450,54 @@ const styles = StyleSheet.create({
     fontSize: Typography.sizes.xs,
     color: Colors.textSecondary,
     marginTop: 2,
+  },
+  // Picker
+  pickerBackdrop: {
+    flex: 1,
+    backgroundColor: "rgba(0,0,0,0.4)",
+    alignItems: "center",
+    justifyContent: "center",
+    padding: Spacing.lg,
+  },
+  pickerSheet: {
+    backgroundColor: Colors.background,
+    borderRadius: BorderRadius.lg,
+    width: "100%",
+    maxWidth: 360,
+    paddingTop: Spacing.md,
+    paddingBottom: Spacing.xs,
+    borderWidth: 1,
+    borderColor: Colors.border,
+  },
+  pickerTitle: {
+    fontSize: Typography.sizes.md,
+    fontWeight: "700",
+    color: Colors.text,
+    textAlign: "center",
+    paddingHorizontal: Spacing.lg,
+    paddingBottom: Spacing.md,
+    borderBottomWidth: 1,
+    borderBottomColor: Colors.border,
+  },
+  pickerOption: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    paddingVertical: Spacing.md,
+    paddingHorizontal: Spacing.lg,
+    borderBottomWidth: 1,
+    borderBottomColor: Colors.border,
+  },
+  pickerOptionLast: {
+    borderBottomWidth: 0,
+  },
+  pickerOptionText: {
+    fontSize: Typography.sizes.md,
+    color: Colors.text,
+  },
+  pickerOptionTextSelected: {
+    fontWeight: "700",
+    color: Colors.tealSage,
   },
   // Modal
   modalContainer: {
