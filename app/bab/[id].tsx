@@ -31,7 +31,7 @@ const FONT_SCALE: Record<string, number> = {
 export default function BabScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
   const router = useRouter();
-  const { fontSize, language, showTranslation, easyReadMode } = useAppSettings();
+  const { fontSize, easyReadMode } = useAppSettings();
   const { width, height } = useWindowDimensions();
   const isLandscape = width > height;
   const babId = parseInt(id || "1", 10);
@@ -89,9 +89,6 @@ export default function BabScreen() {
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, [babId, router, height]);
-
-  const translation = (t: { en: string; tr: string }) =>
-    language === "tr" ? t.tr : t.en;
 
   return (
     <SafeAreaView style={styles.container}>
@@ -164,16 +161,6 @@ export default function BabScreen() {
                 >
                   {line.arabic}
                 </Text>
-                {showTranslation && (
-                  <Text
-                    style={[
-                      styles.translationText,
-                      { fontSize: Typography.sizes.sm * scale },
-                    ]}
-                  >
-                    {translation(line.translation)}
-                  </Text>
-                )}
               </View>
             ))}
 
@@ -191,16 +178,6 @@ export default function BabScreen() {
               >
                 {bab.closing.arabic}
               </Text>
-              {showTranslation && (
-                <Text
-                  style={[
-                    styles.closingTranslation,
-                    { fontSize: Typography.sizes.sm * scale },
-                  ]}
-                >
-                  {translation(bab.closing.translation)}
-                </Text>
-              )}
             </View>
           </>
         )}
@@ -370,11 +347,6 @@ const styles = StyleSheet.create({
     textAlign: "center",
     writingDirection: "rtl",
   },
-  translationText: {
-    color: Colors.tealSage,
-    textAlign: "center",
-    lineHeight: 22,
-  },
   closingSection: {
     backgroundColor: Colors.mint,
     borderRadius: BorderRadius.lg,
@@ -397,11 +369,6 @@ const styles = StyleSheet.create({
     color: Colors.text,
     textAlign: "center",
     writingDirection: "rtl",
-  },
-  closingTranslation: {
-    color: Colors.textSecondary,
-    textAlign: "center",
-    lineHeight: 22,
   },
   bottomNav: {
     flexDirection: "row",

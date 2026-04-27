@@ -69,9 +69,6 @@ export default function FavoritesScreen() {
             </View>
             <View style={styles.babInfo}>
               <Text style={styles.babTitle}>Bab {item.id}</Text>
-              <Text style={styles.babPreview} numberOfLines={1}>
-                {item.lines[0].translation.tr}
-              </Text>
             </View>
             <View style={styles.cardActions}>
               <Pressable
@@ -151,12 +148,6 @@ const styles = StyleSheet.create({
     fontSize: Typography.sizes.md,
     fontWeight: "600",
     color: Colors.text,
-  },
-  babPreview: {
-    fontSize: Typography.sizes.xs,
-    color: Colors.textSecondary,
-    marginTop: 2,
-    fontStyle: "italic",
   },
   cardActions: {
     flexDirection: "row",

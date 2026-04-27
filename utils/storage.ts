@@ -8,14 +8,11 @@ const KEYS = {
   READING_LOG: "@cevsen_reading_log",
   LAST_READ: "@cevsen_last_read",
   FONT_SIZE: "@cevsen_font_size",
-  LANGUAGE: "@cevsen_language",
   NOTIFICATION_ENABLED: "@cevsen_notification_enabled",
-  SHOW_TRANSLATION: "@cevsen_show_translation",
   EASY_READ: "@cevsen_easy_read",
 };
 
 export type FontSize = "small" | "medium" | "large";
-export type Language = "en" | "tr";
 
 function todayStr(): string {
   return new Date().toISOString().slice(0, 10);
@@ -158,24 +155,6 @@ export async function getFontSize(): Promise<FontSize> {
 
 export async function saveFontSize(size: FontSize): Promise<void> {
   await AsyncStorage.setItem(KEYS.FONT_SIZE, size);
-}
-
-export async function getLanguage(): Promise<Language> {
-  const raw = await AsyncStorage.getItem(KEYS.LANGUAGE);
-  return (raw as Language) || "tr";
-}
-
-export async function saveLanguage(lang: Language): Promise<void> {
-  await AsyncStorage.setItem(KEYS.LANGUAGE, lang);
-}
-
-export async function getShowTranslation(): Promise<boolean> {
-  const raw = await AsyncStorage.getItem(KEYS.SHOW_TRANSLATION);
-  return raw === null ? false : raw === "true";
-}
-
-export async function saveShowTranslation(val: boolean): Promise<void> {
-  await AsyncStorage.setItem(KEYS.SHOW_TRANSLATION, String(val));
 }
 
 export async function getEasyReadMode(): Promise<boolean> {

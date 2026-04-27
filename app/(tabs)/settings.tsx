@@ -21,7 +21,7 @@ import {
   getNotificationEnabled,
   saveNotificationEnabled,
 } from "../../utils/storage";
-import { FontSize, Language } from "../../utils/storage";
+import { FontSize } from "../../utils/storage";
 
 async function scheduleDaily(): Promise<boolean> {
   const { status } = await Notifications.requestPermissionsAsync();
@@ -88,17 +88,13 @@ function Row({ icon, title, subtitle, onPress, right, last }: RowProps) {
 export default function SettingsScreen() {
   const {
     fontSize,
-    language,
-    showTranslation,
     easyReadMode,
     setFontSize,
-    setLanguage,
-    setShowTranslation,
     setEasyReadMode,
   } = useAppSettings();
   const [notifEnabled, setNotifEnabled] = useState(false);
   const [aboutVisible, setAboutVisible] = useState(false);
-  const [picker, setPicker] = useState<"font" | "lang" | null>(null);
+  const [picker, setPicker] = useState<"font" | null>(null);
 
   useFocusEffect(
     useCallback(() => {
@@ -129,10 +125,6 @@ export default function SettingsScreen() {
     { text: "Orta", size: "medium" },
     { text: "Büyük", size: "large" },
   ];
-  const langOptions: { text: string; lang: Language }[] = [
-    { text: "Türkçe", lang: "tr" },
-    { text: "English", lang: "en" },
-  ];
 
   function handleSignIn() {
     Alert.alert(
@@ -144,7 +136,6 @@ export default function SettingsScreen() {
 
   const fontSizeLabel =
     fontSize === "small" ? "Küçük" : fontSize === "large" ? "Büyük" : "Orta";
-  const languageLabel = language === "tr" ? "Türkçe" : "English";
 
   return (
     <SafeAreaView style={styles.container}>
@@ -176,22 +167,6 @@ export default function SettingsScreen() {
             onPress={() => setPicker("font")}
           />
           <Row
-            icon="eye-outline"
-            title="Çeviriyi Göster"
-            subtitle={showTranslation ? "Açık" : "Kapalı"}
-            right={
-              <Switch
-                value={showTranslation}
-                onValueChange={setShowTranslation}
-                trackColor={{
-                  false: Colors.border,
-                  true: Colors.tealSage,
-                }}
-                thumbColor={Colors.white}
-              />
-            }
-          />
-          <Row
             icon="albums-outline"
             title="Kolay Okuma Modu"
             subtitle={
@@ -210,12 +185,6 @@ export default function SettingsScreen() {
                 thumbColor={Colors.white}
               />
             }
-          />
-          <Row
-            icon="language-outline"
-            title="Çeviri Dili"
-            subtitle={languageLabel}
-            onPress={() => setPicker("lang")}
             last
           />
         </View>
@@ -268,76 +237,40 @@ export default function SettingsScreen() {
             onPress={() => setPicker(null)}
           >
             <Pressable style={styles.pickerSheet} onPress={() => {}}>
-              <Text style={styles.pickerTitle}>
-                {picker === "font" ? "Yazı Boyutu" : "Çeviri Dili"}
-              </Text>
-              {picker === "font"
-                ? fontOptions.map((o, i) => {
-                    const selected = fontSize === o.size;
-                    return (
-                      <Pressable
-                        key={o.size}
-                        style={[
-                          styles.pickerOption,
-                          i === fontOptions.length - 1 &&
-                            styles.pickerOptionLast,
-                        ]}
-                        onPress={() => {
-                          setFontSize(o.size);
-                          setPicker(null);
-                        }}
-                      >
-                        <Text
-                          style={[
-                            styles.pickerOptionText,
-                            selected && styles.pickerOptionTextSelected,
-                          ]}
-                        >
-                          {o.text}
-                        </Text>
-                        {selected && (
-                          <Ionicons
-                            name="checkmark"
-                            size={20}
-                            color={Colors.tealSage}
-                          />
-                        )}
-                      </Pressable>
-                    );
-                  })
-                : langOptions.map((o, i) => {
-                    const selected = language === o.lang;
-                    return (
-                      <Pressable
-                        key={o.lang}
-                        style={[
-                          styles.pickerOption,
-                          i === langOptions.length - 1 &&
-                            styles.pickerOptionLast,
-                        ]}
-                        onPress={() => {
-                          setLanguage(o.lang);
-                          setPicker(null);
-                        }}
-                      >
-                        <Text
-                          style={[
-                            styles.pickerOptionText,
-                            selected && styles.pickerOptionTextSelected,
-                          ]}
-                        >
-                          {o.text}
-                        </Text>
-                        {selected && (
-                          <Ionicons
-                            name="checkmark"
-                            size={20}
-                            color={Colors.tealSage}
-                          />
-                        )}
-                      </Pressable>
-                    );
-                  })}
+              <Text style={styles.pickerTitle}>Yazı Boyutu</Text>
+              {fontOptions.map((o, i) => {
+                const selected = fontSize === o.size;
+                return (
+                  <Pressable
+                    key={o.size}
+                    style={[
+                      styles.pickerOption,
+                      i === fontOptions.length - 1 &&
+                        styles.pickerOptionLast,
+                    ]}
+                    onPress={() => {
+                      setFontSize(o.size);
+                      setPicker(null);
+                    }}
+                  >
+                    <Text
+                      style={[
+                        styles.pickerOptionText,
+                        selected && styles.pickerOptionTextSelected,
+                      ]}
+                    >
+                      {o.text}
+                    </Text>
+                    {selected && (
+                      <Ionicons
+                        name="checkmark"
+                        size={20}
+                        color={Colors.tealSage}
+                      />
+                    )}
+                  </Pressable>
+                );
+              })}
             </Pressable>
           </Pressable>
         </Modal>
