@@ -31,7 +31,7 @@ const FONT_SCALE: Record<string, number> = {
 export default function BabScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
   const router = useRouter();
-  const { fontSize, language, showTranslation } = useAppSettings();
+  const { fontSize, language, showTranslation, easyReadMode } = useAppSettings();
   const { width, height } = useWindowDimensions();
   const isLandscape = width > height;
   const babId = parseInt(id || "1", 10);
@@ -139,12 +139,24 @@ export default function BabScreen() {
               <View
                 key={index}
                 style={[
-                  styles.lineCard,
-                  isLandscape && styles.lineCardLandscape,
+                  easyReadMode ? styles.lineCard : styles.lineBook,
+                  easyReadMode && isLandscape && styles.lineCardLandscape,
                 ]}
               >
-                <View style={styles.lineNumber}>
-                  <Text style={styles.lineNumberText}>{index + 1}</Text>
+                <View
+                  style={
+                    easyReadMode ? styles.lineNumber : styles.lineNumberBook
+                  }
+                >
+                  <Text
+                    style={
+                      easyReadMode
+                        ? styles.lineNumberText
+                        : styles.lineNumberTextBook
+                    }
+                  >
+                    {index + 1}
+                  </Text>
                 </View>
                 <Text
                   style={[
@@ -168,7 +180,11 @@ export default function BabScreen() {
             ))}
 
             {/* Closing Dua */}
-            <View style={styles.closingSection}>
+            <View
+              style={
+                easyReadMode ? styles.closingSection : styles.closingBook
+              }
+            >
               <Text
                 style={[
                   styles.closingArabic,
@@ -305,6 +321,13 @@ const styles = StyleSheet.create({
     paddingHorizontal: Spacing.sm,
     marginBottom: 3,
   },
+  lineBook: {
+    paddingVertical: Spacing.sm,
+    paddingHorizontal: Spacing.xs,
+    marginBottom: Spacing.sm,
+    alignItems: "center",
+    gap: 6,
+  },
   lineNumber: {
     position: "absolute",
     top: 4,
@@ -320,6 +343,18 @@ const styles = StyleSheet.create({
     fontSize: Typography.sizes.xs,
     fontWeight: "700",
     color: Colors.gold,
+  },
+  lineNumberBook: {
+    position: "absolute",
+    top: 6,
+    left: 0,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  lineNumberTextBook: {
+    fontSize: Typography.sizes.xs,
+    fontWeight: "600",
+    color: Colors.textLight,
   },
   arabicText: {
     fontFamily: "NotoNaskhArabic",
@@ -337,6 +372,15 @@ const styles = StyleSheet.create({
     borderRadius: BorderRadius.lg,
     padding: Spacing.lg,
     marginTop: Spacing.sm,
+    alignItems: "center",
+    gap: Spacing.md,
+  },
+  closingBook: {
+    paddingTop: Spacing.lg,
+    paddingHorizontal: Spacing.xs,
+    marginTop: Spacing.md,
+    borderTopWidth: 1,
+    borderTopColor: Colors.border,
     alignItems: "center",
     gap: Spacing.md,
   },

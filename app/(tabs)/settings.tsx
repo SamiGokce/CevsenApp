@@ -86,7 +86,16 @@ function Row({ icon, title, subtitle, onPress, right, last }: RowProps) {
 }
 
 export default function SettingsScreen() {
-  const { fontSize, language, showTranslation, setFontSize, setLanguage, setShowTranslation } = useAppSettings();
+  const {
+    fontSize,
+    language,
+    showTranslation,
+    easyReadMode,
+    setFontSize,
+    setLanguage,
+    setShowTranslation,
+    setEasyReadMode,
+  } = useAppSettings();
   const [notifEnabled, setNotifEnabled] = useState(false);
   const [aboutVisible, setAboutVisible] = useState(false);
 
@@ -200,6 +209,26 @@ export default function SettingsScreen() {
               <Switch
                 value={showTranslation}
                 onValueChange={setShowTranslation}
+                trackColor={{
+                  false: Colors.border,
+                  true: Colors.tealSage,
+                }}
+                thumbColor={Colors.white}
+              />
+            }
+          />
+          <Row
+            icon="albums-outline"
+            title="Kolay Okuma Modu"
+            subtitle={
+              easyReadMode
+                ? "Her satır ayrı kart"
+                : "Kitap görünümü"
+            }
+            right={
+              <Switch
+                value={easyReadMode}
+                onValueChange={setEasyReadMode}
                 trackColor={{
                   false: Colors.border,
                   true: Colors.tealSage,

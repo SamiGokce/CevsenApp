@@ -6,6 +6,8 @@ import {
   saveLanguage,
   getShowTranslation,
   saveShowTranslation,
+  getEasyReadMode,
+  saveEasyReadMode,
   FontSize,
   Language,
 } from "../utils/storage";
@@ -14,33 +16,42 @@ interface AppContextValue {
   fontSize: FontSize;
   language: Language;
   showTranslation: boolean;
+  easyReadMode: boolean;
   setFontSize: (s: FontSize) => void;
   setLanguage: (l: Language) => void;
   setShowTranslation: (v: boolean) => void;
+  setEasyReadMode: (v: boolean) => void;
 }
 
 const AppContext = createContext<AppContextValue>({
   fontSize: "medium",
   language: "tr",
   showTranslation: true,
+  easyReadMode: false,
   setFontSize: () => {},
   setLanguage: () => {},
   setShowTranslation: () => {},
+  setEasyReadMode: () => {},
 });
 
 export function AppProvider({ children }: { children: React.ReactNode }) {
   const [fontSize, setFontSizeState] = useState<FontSize>("medium");
   const [language, setLanguageState] = useState<Language>("tr");
   const [showTranslation, setShowTranslationState] = useState<boolean>(true);
+  const [easyReadMode, setEasyReadModeState] = useState<boolean>(false);
 
   useEffect(() => {
-    Promise.all([getFontSize(), getLanguage(), getShowTranslation()]).then(
-      ([fs, lang, showTr]) => {
-        setFontSizeState(fs);
-        setLanguageState(lang);
-        setShowTranslationState(showTr);
-      }
-    );
+    Promise.all([
+      getFontSize(),
+      getLanguage(),
+      getShowTranslation(),
+      getEasyReadMode(),
+    ]).then(([fs, lang, showTr, easy]) => {
+      setFontSizeState(fs);
+      setLanguageState(lang);
+      setShowTranslationState(showTr);
+      setEasyReadModeState(easy);
+    });
   }, []);
 
   function setFontSize(s: FontSize) {
@@ -58,9 +69,23 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     saveShowTranslation(v);
   }
 
+  function setEasyReadMode(v: boolean) {
+    setEasyReadModeState(v);
+    saveEasyReadMode(v);
+  }
+
   return (
     <AppContext.Provider
-      value={{ fontSize, language, showTranslation, setFontSize, setLanguage, setShowTranslation }}
+      value={{
+        fontSize,
+        language,
+        showTranslation,
+        easyReadMode,
+        setFontSize,
+        setLanguage,
+        setShowTranslation,
+        setEasyReadMode,
+      }}
     >
       {children}
     </AppContext.Provider>

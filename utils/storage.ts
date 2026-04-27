@@ -11,6 +11,7 @@ const KEYS = {
   LANGUAGE: "@cevsen_language",
   NOTIFICATION_ENABLED: "@cevsen_notification_enabled",
   SHOW_TRANSLATION: "@cevsen_show_translation",
+  EASY_READ: "@cevsen_easy_read",
 };
 
 export type FontSize = "small" | "medium" | "large";
@@ -175,6 +176,15 @@ export async function getShowTranslation(): Promise<boolean> {
 
 export async function saveShowTranslation(val: boolean): Promise<void> {
   await AsyncStorage.setItem(KEYS.SHOW_TRANSLATION, String(val));
+}
+
+export async function getEasyReadMode(): Promise<boolean> {
+  const raw = await AsyncStorage.getItem(KEYS.EASY_READ);
+  return raw === null ? false : raw === "true";
+}
+
+export async function saveEasyReadMode(val: boolean): Promise<void> {
+  await AsyncStorage.setItem(KEYS.EASY_READ, String(val));
 }
 
 export async function getNotificationEnabled(): Promise<boolean> {
