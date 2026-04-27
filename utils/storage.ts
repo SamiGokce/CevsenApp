@@ -171,7 +171,7 @@ export async function saveLanguage(lang: Language): Promise<void> {
 
 export async function getShowTranslation(): Promise<boolean> {
   const raw = await AsyncStorage.getItem(KEYS.SHOW_TRANSLATION);
-  return raw === null ? true : raw === "true";
+  return raw === null ? false : raw === "true";
 }
 
 export async function saveShowTranslation(val: boolean): Promise<void> {

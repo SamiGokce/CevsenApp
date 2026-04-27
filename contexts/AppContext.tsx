@@ -26,7 +26,7 @@ interface AppContextValue {
 const AppContext = createContext<AppContextValue>({
   fontSize: "medium",
   language: "tr",
-  showTranslation: true,
+  showTranslation: false,
   easyReadMode: false,
   setFontSize: () => {},
   setLanguage: () => {},
@@ -37,7 +37,7 @@ const AppContext = createContext<AppContextValue>({
 export function AppProvider({ children }: { children: React.ReactNode }) {
   const [fontSize, setFontSizeState] = useState<FontSize>("medium");
   const [language, setLanguageState] = useState<Language>("tr");
-  const [showTranslation, setShowTranslationState] = useState<boolean>(true);
+  const [showTranslation, setShowTranslationState] = useState<boolean>(false);
   const [easyReadMode, setEasyReadModeState] = useState<boolean>(false);
 
   useEffect(() => {
